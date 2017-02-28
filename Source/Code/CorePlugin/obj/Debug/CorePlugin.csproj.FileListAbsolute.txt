@@ -1,0 +1,67 @@
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.dll
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.pdb
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.xml
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\Duality.dll
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.dll
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\NVorbis.dll
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\FarseerDuality.dll
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\Duality.pdb
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\Duality.xml
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.pdb
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.xml
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\NVorbis.xml
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\FarseerDuality.pdb
+C:\devTools\Duality\Source\Code\CorePlugin\bin\Debug\FarseerDuality.xml
+C:\devTools\Duality\Source\Code\CorePlugin\obj\Debug\CorePlugin.csprojResolveAssemblyReference.cache
+C:\devTools\Duality\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.dll
+C:\devTools\Duality\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.pdb
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.dll
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.pdb
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.xml
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\Duality.dll
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.dll
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\NVorbis.dll
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\FarseerDuality.dll
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\Duality.pdb
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\Duality.xml
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.pdb
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.xml
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\NVorbis.xml
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\FarseerDuality.pdb
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\bin\Debug\FarseerDuality.xml
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\obj\Debug\CorePlugin.csprojResolveAssemblyReference.cache
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.dll
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.pdb
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.dll
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.pdb
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.xml
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\Duality.dll
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.dll
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\NVorbis.dll
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\FarseerDuality.dll
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\Duality.pdb
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\Duality.xml
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.pdb
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.xml
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\NVorbis.xml
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\FarseerDuality.pdb
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\bin\Debug\FarseerDuality.xml
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.dll
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.pdb
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.dll
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.pdb
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.xml
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\Duality.dll
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.dll
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\NVorbis.dll
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\FarseerDuality.dll
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\Duality.pdb
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\Duality.xml
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.pdb
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.xml
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\NVorbis.xml
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\FarseerDuality.pdb
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\bin\Debug\FarseerDuality.xml
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.dll
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.pdb
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\obj\Debug\CorePlugin.csprojResolveAssemblyReference.cache

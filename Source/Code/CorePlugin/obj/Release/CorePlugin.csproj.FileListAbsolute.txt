@@ -1,0 +1,3 @@
+C:\devTools\snowPlatform\SnowPlatform\Source\Code\CorePlugin\obj\Release\CorePlugin.csprojResolveAssemblyReference.cache
+C:\devTools\10_Stacks\10 Stacks\Source\Code\CorePlugin\obj\Release\CorePlugin.csprojResolveAssemblyReference.cache
+C:\devTools\RainingPackages\RainingPackages\Source\Code\CorePlugin\obj\Release\CorePlugin.csprojResolveAssemblyReference.cache

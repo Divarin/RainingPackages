@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GamePlugin.core</name>
+    </assembly>
+    <members>
+        <member name="P:RainingPackages.GameObjects.DroneControl.FlyAwayStep">
+            <summary>
+            Maximum throttle power
+            </summary>
+        </member>
+        <member name="P:RainingPackages.GameObjects.DroneControl.ThrottleStep">
+            <summary>
+            How quickly the drone raises or lowers throttle
+            </summary>
+        </member>
+        <member name="T:RainingPackages.RainingPackagesCorePlugin">
+            <summary>
+            Defines a Duality core plugin.
+            </summary>
+        </member>
+    </members>
+</doc>
