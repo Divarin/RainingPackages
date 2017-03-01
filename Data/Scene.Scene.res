@@ -194,23 +194,90 @@
         <_items dataType="Array" type="Duality.Component[]" id="2450250624">
           <item dataType="Struct" type="Duality.Components.Transform" id="4130185336">
             <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
+            <angleVel dataType="Float">0</angleVel>
+            <angleVelAbs dataType="Float">0</angleVelAbs>
+            <deriveAngle dataType="Bool">true</deriveAngle>
             <gameobj dataType="ObjectRef">1769870404</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <parentTransform />
+            <pos dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-1000</Y>
+              <Z dataType="Float">0</Z>
+            </pos>
+            <posAbs dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-1000</Y>
+              <Z dataType="Float">0</Z>
+            </posAbs>
+            <scale dataType="Float">1</scale>
+            <scaleAbs dataType="Float">1</scaleAbs>
+            <vel dataType="Struct" type="Duality.Vector3" />
+            <velAbs dataType="Struct" type="Duality.Vector3" />
           </item>
           <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="3412036972">
             <active dataType="Bool">true</active>
+            <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+              <A dataType="Byte">255</A>
+              <B dataType="Byte">255</B>
+              <G dataType="Byte">255</G>
+              <R dataType="Byte">255</R>
+            </colorTint>
+            <customMat />
+            <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
             <gameobj dataType="ObjectRef">1769870404</gameobj>
+            <offset dataType="Int">0</offset>
+            <pixelGrid dataType="Bool">false</pixelGrid>
+            <rect dataType="Struct" type="Duality.Rect">
+              <H dataType="Float">250</H>
+              <W dataType="Float">178</W>
+              <X dataType="Float">-89</X>
+              <Y dataType="Float">-125</Y>
+            </rect>
+            <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+            <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+              <contentPath dataType="String">Data\Images\stickman.Material.res</contentPath>
+            </sharedMat>
+            <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
           </item>
-          <item dataType="Struct" type="RainingPackages.GameObjects.Player" id="212500464">
+          <item dataType="Struct" type="RainingPackages.GameObjects.RaycastController" id="1647690064">
+            <_bounds dataType="Struct" type="Duality.Rect">
+              <H dataType="Float">250</H>
+              <W dataType="Float">178</W>
+              <X dataType="Float">-89</X>
+              <Y dataType="Float">-1125</Y>
+            </_bounds>
+            <_collisions dataType="Struct" type="RainingPackages.GameObjects.RaycastController+CollisionInfo" />
+            <_horizontalRaySpacing dataType="Float">76.6666641</_horizontalRaySpacing>
+            <_raycastOrigins dataType="Struct" type="RainingPackages.GameObjects.RaycastController+RayCastOrigins" />
+            <_verticalRaySpacing dataType="Float">52.6666679</_verticalRaySpacing>
+            <_x003C_HorizontalRayCount_x003E_k__BackingField dataType="Int">4</_x003C_HorizontalRayCount_x003E_k__BackingField>
+            <_x003C_MaxClimbAngle_x003E_k__BackingField dataType="Float">80</_x003C_MaxClimbAngle_x003E_k__BackingField>
+            <_x003C_MaxDescendAngle_x003E_k__BackingField dataType="Float">75</_x003C_MaxDescendAngle_x003E_k__BackingField>
+            <_x003C_SkinWidth_x003E_k__BackingField dataType="Float">10</_x003C_SkinWidth_x003E_k__BackingField>
+            <_x003C_Velocity_x003E_k__BackingField dataType="Float">0</_x003C_Velocity_x003E_k__BackingField>
+            <_x003C_VerticalRayCount_x003E_k__BackingField dataType="Int">4</_x003C_VerticalRayCount_x003E_k__BackingField>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">1769870404</gameobj>
           </item>
-          <item dataType="Struct" type="Duality.Components.Physics.RigidBody" id="537679632">
+          <item dataType="Struct" type="RainingPackages.GameObjects.PlayerController" id="2566220740">
+            <_isJumping dataType="Bool">false</_isJumping>
+            <_x003C_AccelerationAirborne_x003E_k__BackingField dataType="Float">25</_x003C_AccelerationAirborne_x003E_k__BackingField>
+            <_x003C_AccelerationGrounded_x003E_k__BackingField dataType="Float">100</_x003C_AccelerationGrounded_x003E_k__BackingField>
+            <_x003C_JumpHeight_x003E_k__BackingField dataType="Float">500</_x003C_JumpHeight_x003E_k__BackingField>
+            <_x003C_MoveSpeed_x003E_k__BackingField dataType="Float">1500</_x003C_MoveSpeed_x003E_k__BackingField>
+            <_x003C_TimeToJumpApex_x003E_k__BackingField dataType="Float">0.4</_x003C_TimeToJumpApex_x003E_k__BackingField>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">1769870404</gameobj>
+            <gravity dataType="Float">6250</gravity>
+            <jumpVelocity dataType="Float">2500</jumpVelocity>
+            <velocity dataType="Struct" type="Duality.Vector2" />
           </item>
         </_items>
         <_size dataType="Int">4</_size>
-        <_version dataType="Int">4</_version>
+        <_version dataType="Int">12</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3535833914" surrogate="true">
         <header />
@@ -218,14 +285,14 @@
           <keys dataType="Array" type="System.Object[]" id="735997888">
             <item dataType="ObjectRef">2122539126</item>
             <item dataType="ObjectRef">2557544288</item>
-            <item dataType="Type" id="23900956" value="RainingPackages.GameObjects.Player" />
-            <item dataType="Type" id="2240785942" value="Duality.Components.Physics.RigidBody" />
+            <item dataType="Type" id="23900956" value="RainingPackages.GameObjects.RaycastController" />
+            <item dataType="Type" id="2240785942" value="RainingPackages.GameObjects.PlayerController" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="2865269838">
             <item dataType="ObjectRef">4130185336</item>
             <item dataType="ObjectRef">3412036972</item>
-            <item dataType="ObjectRef">212500464</item>
-            <item dataType="ObjectRef">537679632</item>
+            <item dataType="ObjectRef">1647690064</item>
+            <item dataType="ObjectRef">2566220740</item>
           </values>
         </body>
       </compMap>
@@ -239,150 +306,7 @@
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
       <name dataType="String">player</name>
       <parent />
-      <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="2045232378">
-        <changes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.PrefabLink+VarMod]]" id="3088231168">
-          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="2299935388" length="8">
-            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1467647176">
-                <_items dataType="Array" type="System.Int32[]" id="1125835372"></_items>
-                <_size dataType="Int">0</_size>
-                <_version dataType="Int">1</_version>
-              </childIndex>
-              <componentType dataType="ObjectRef">2240785942</componentType>
-              <prop dataType="MemberInfo" id="478194398" value="P:Duality.Components.Physics.RigidBody:Mass" />
-              <val dataType="Float">114.9</val>
-            </item>
-            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="4246776116">
-                <_items dataType="Array" type="System.Int32[]" id="3696100680"></_items>
-                <_size dataType="Int">0</_size>
-                <_version dataType="Int">1</_version>
-              </childIndex>
-              <componentType dataType="ObjectRef">2122539126</componentType>
-              <prop dataType="MemberInfo" id="994000674" value="P:Duality.Components.Transform:RelativePos" />
-              <val dataType="Struct" type="Duality.Vector3">
-                <X dataType="Float">0</X>
-                <Y dataType="Float">1300</Y>
-                <Z dataType="Float">0</Z>
-              </val>
-            </item>
-            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="197672576">
-                <_items dataType="Array" type="System.Int32[]" id="4202589300"></_items>
-                <_size dataType="Int">0</_size>
-                <_version dataType="Int">1</_version>
-              </childIndex>
-              <componentType dataType="ObjectRef">2240785942</componentType>
-              <prop dataType="MemberInfo" id="1571886982" value="P:Duality.Components.Physics.RigidBody:Restitution" />
-              <val dataType="Float">0</val>
-            </item>
-            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1001170348">
-                <_items dataType="Array" type="System.Int32[]" id="2479715600"></_items>
-                <_size dataType="Int">0</_size>
-                <_version dataType="Int">1</_version>
-              </childIndex>
-              <componentType dataType="ObjectRef">2240785942</componentType>
-              <prop dataType="MemberInfo" id="2978303242" value="P:Duality.Components.Physics.RigidBody:Shapes" />
-              <val dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Physics.ShapeInfo]]" id="2593900408">
-                <_items dataType="Array" type="Duality.Components.Physics.ShapeInfo[]" id="3549930492" length="6">
-                  <item dataType="Struct" type="Duality.Components.Physics.CircleShapeInfo" id="54508356">
-                    <density dataType="Float">1</density>
-                    <friction dataType="Float">10</friction>
-                    <parent />
-                    <position dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">0.3686943</X>
-                      <Y dataType="Float">-86.12268</Y>
-                    </position>
-                    <radius dataType="Float">34.2948227</radius>
-                    <restitution dataType="Float">0</restitution>
-                    <sensor dataType="Bool">false</sensor>
-                  </item>
-                  <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="2378397334">
-                    <density dataType="Float">1</density>
-                    <friction dataType="Float">10</friction>
-                    <parent />
-                    <restitution dataType="Float">0</restitution>
-                    <sensor dataType="Bool">false</sensor>
-                    <vertices dataType="Array" type="Duality.Vector2[]" id="1354954446">
-                      <item dataType="Struct" type="Duality.Vector2">
-                        <X dataType="Float">-36.16918</X>
-                        <Y dataType="Float">12.19751</Y>
-                      </item>
-                      <item dataType="Struct" type="Duality.Vector2">
-                        <X dataType="Float">38.89954</X>
-                        <Y dataType="Float">12.19751</Y>
-                      </item>
-                      <item dataType="Struct" type="Duality.Vector2">
-                        <X dataType="Float">35.5779152</X>
-                        <Y dataType="Float">-34.9696045</Y>
-                      </item>
-                      <item dataType="Struct" type="Duality.Vector2">
-                        <X dataType="Float">3.02599335</X>
-                        <Y dataType="Float">-52.2420654</Y>
-                      </item>
-                      <item dataType="Struct" type="Duality.Vector2">
-                        <X dataType="Float">-36.8335075</X>
-                        <Y dataType="Float">-34.9696045</Y>
-                      </item>
-                    </vertices>
-                  </item>
-                  <item dataType="Struct" type="Duality.Components.Physics.CircleShapeInfo" id="3164162816">
-                    <density dataType="Float">1</density>
-                    <friction dataType="Float">0.3</friction>
-                    <parent />
-                    <position dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">0.0715103149</X>
-                      <Y dataType="Float">62.4234619</Y>
-                    </position>
-                    <radius dataType="Float">62.7267151</radius>
-                    <restitution dataType="Float">0.3</restitution>
-                    <sensor dataType="Bool">false</sensor>
-                  </item>
-                </_items>
-                <_size dataType="Int">3</_size>
-                <_version dataType="Int">12</_version>
-              </val>
-            </item>
-            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2052346926">
-                <_items dataType="Array" type="System.Int32[]" id="722461818"></_items>
-                <_size dataType="Int">0</_size>
-                <_version dataType="Int">1</_version>
-              </childIndex>
-              <componentType dataType="ObjectRef">2240785942</componentType>
-              <prop dataType="MemberInfo" id="3223113828" value="P:Duality.Components.Physics.RigidBody:IgnoreGravity" />
-              <val dataType="Bool">false</val>
-            </item>
-            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="796221362">
-                <_items dataType="ObjectRef">722461818</_items>
-                <_size dataType="Int">0</_size>
-                <_version dataType="Int">1</_version>
-              </childIndex>
-              <componentType dataType="ObjectRef">2240785942</componentType>
-              <prop dataType="MemberInfo" id="3158781488" value="P:Duality.Components.Physics.RigidBody:Friction" />
-              <val dataType="Float">10</val>
-            </item>
-            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="1672845270">
-                <_items dataType="Array" type="System.Int32[]" id="1077970386"></_items>
-                <_size dataType="Int">0</_size>
-                <_version dataType="Int">1</_version>
-              </childIndex>
-              <componentType dataType="ObjectRef">2240785942</componentType>
-              <prop dataType="MemberInfo" id="388998044" value="P:Duality.Components.Physics.RigidBody:LinearDamping" />
-              <val dataType="Float">0.3</val>
-            </item>
-          </_items>
-          <_size dataType="Int">7</_size>
-          <_version dataType="Int">1581</_version>
-        </changes>
-        <obj dataType="ObjectRef">1769870404</obj>
-        <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
-          <contentPath dataType="String">Data\player.Prefab.res</contentPath>
-        </prefab>
-      </prefabLink>
+      <prefabLink />
     </item>
     <item dataType="Struct" type="Duality.GameObject" id="2437817580">
       <active dataType="Bool">true</active>
@@ -393,7 +317,7 @@
             <_texts dataType="Struct" type="System.Collections.Generic.List`1[[System.String]]" id="2875919821">
               <_items dataType="Array" type="System.String[]" id="189741606" length="0" />
               <_size dataType="Int">0</_size>
-              <_version dataType="Int">37512</_version>
+              <_version dataType="Int">127740</_version>
             </_texts>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">2437817580</gameobj>
@@ -500,7 +424,7 @@
             <revolutions dataType="Float">0</revolutions>
             <shapes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Components.Physics.ShapeInfo]]" id="885802657">
               <_items dataType="Array" type="Duality.Components.Physics.ShapeInfo[]" id="4079481966" length="64">
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="3886095952">
+                <item dataType="Struct" type="Duality.Components.Physics.ChainShapeInfo" id="3886095952">
                   <density dataType="Float">1</density>
                   <friction dataType="Float">0.3</friction>
                   <parent dataType="ObjectRef">2165600913</parent>
@@ -508,24 +432,204 @@
                   <sensor dataType="Bool">false</sensor>
                   <vertices dataType="Array" type="Duality.Vector2[]" id="1212464572">
                     <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-8180.409</X>
-                      <Y dataType="Float">-522.6485</Y>
+                      <X dataType="Float">-8200.707</X>
+                      <Y dataType="Float">-1106.81</Y>
                     </item>
                     <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-7773.6543</X>
-                      <Y dataType="Float">-498.7218</Y>
+                      <X dataType="Float">-8198.335</X>
+                      <Y dataType="Float">-511.477356</Y>
                     </item>
                     <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-7007.99951</X>
-                      <Y dataType="Float">488.255737</Y>
+                      <X dataType="Float">-7788.006</X>
+                      <Y dataType="Float">-509.10553</Y>
                     </item>
                     <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-8186.39063</X>
-                      <Y dataType="Float">512.1825</Y>
+                      <X dataType="Float">-7572.168</X>
+                      <Y dataType="Float">-224.484375</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-7319.129</X>
+                      <Y dataType="Float">54.20508</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-6996.558</X>
+                      <Y dataType="Float">251.068115</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-6700.078</X>
+                      <Y dataType="Float">360.172852</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-6353.78857</X>
+                      <Y dataType="Float">386.263184</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-6059.68</X>
+                      <Y dataType="Float">353.057373</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-5376.05371</X>
+                      <Y dataType="Float">143.202881</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-4875.59473</X>
+                      <Y dataType="Float">-13.3387451</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-4650.26953</X>
+                      <Y dataType="Float">-65.51929</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-4351.41748</X>
+                      <Y dataType="Float">-82.12219</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-3848.49951</X>
+                      <Y dataType="Float">-28.7302246</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-3343.29688</X>
+                      <Y dataType="Float">-14.4991455</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-3004.123</X>
+                      <Y dataType="Float">-66.67969</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-2441.40015</X>
+                      <Y dataType="Float">-58.9696045</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-2237.42163</X>
+                      <Y dataType="Float">-113.521973</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-1931.45386</X>
+                      <Y dataType="Float">-141.984131</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-1599.39575</X>
+                      <Y dataType="Float">-189.421021</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-1301.94055</X>
+                      <Y dataType="Float">-239.24292</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-1055.26892</X>
+                      <Y dataType="Float">-210.780762</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">-165.827637</X>
+                      <Y dataType="Float">-13.9178467</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">932.5657</X>
+                      <Y dataType="Float">376.7207</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">1278.85474</X>
+                      <Y dataType="Float">419.413818</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">1900.75708</X>
+                      <Y dataType="Float">422.471924</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">2491.346</X>
+                      <Y dataType="Float">410.6128</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">2787.82642</X>
+                      <Y dataType="Float">370.291382</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">3065.332</X>
+                      <Y dataType="Float">313.3672</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">3529.7417</X>
+                      <Y dataType="Float">268.16687</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">3909.26538</X>
+                      <Y dataType="Float">170.921265</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">4158.309</X>
+                      <Y dataType="Float">95.02234</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">4582.869</X>
+                      <Y dataType="Float">-127.930908</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">4888.837</X>
+                      <Y dataType="Float">-301.075562</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">5097.217</X>
+                      <Y dataType="Float">-361.8369</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">5353.37549</X>
+                      <Y dataType="Float">-378.439819</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">5581.07275</X>
+                      <Y dataType="Float">-326.259277</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">5990.747</X>
+                      <Y dataType="Float">-279.480225</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">6244.55225</X>
+                      <Y dataType="Float">-291.339478</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">6519.686</X>
+                      <Y dataType="Float">-293.711426</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">6695.202</X>
+                      <Y dataType="Float">-251.018188</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">6882.041</X>
+                      <Y dataType="Float">-124.31189</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">7183.265</X>
+                      <Y dataType="Float">98.64136</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">7384.87158</X>
+                      <Y dataType="Float">231.4646</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">7531.926</X>
+                      <Y dataType="Float">281.273315</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">7652.89</X>
+                      <Y dataType="Float">231.4646</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">7792.82861</X>
+                      <Y dataType="Float">119.988037</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">8027.641</X>
+                      <Y dataType="Float">-181.236084</Y>
+                    </item>
+                    <item dataType="Struct" type="Duality.Vector2">
+                      <X dataType="Float">8067.787</X>
+                      <Y dataType="Float">-635.7202</Y>
                     </item>
                   </vertices>
                 </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="2301607278">
+                <item dataType="Struct" type="Duality.Components.Physics.ChainShapeInfo" id="2301607278">
                   <density dataType="Float">1</density>
                   <friction dataType="Float">0.3</friction>
                   <parent dataType="ObjectRef">2165600913</parent>
@@ -533,20 +637,16 @@
                   <sensor dataType="Bool">false</sensor>
                   <vertices dataType="Array" type="Duality.Vector2[]" id="901907234">
                     <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-7411.42627</X>
-                      <Y dataType="Float">-32.0411377</Y>
+                      <X dataType="Float">8061.51367</X>
+                      <Y dataType="Float">-212.000244</Y>
                     </item>
                     <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-7443.92</X>
-                      <Y dataType="Float">505.9109</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-6577.42</X>
-                      <Y dataType="Float">509.521362</Y>
+                      <X dataType="Float">8051.5625</X>
+                      <Y dataType="Float">-1610.61987</Y>
                     </item>
                   </vertices>
                 </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="264208428">
+                <item dataType="Struct" type="Duality.Components.Physics.ChainShapeInfo" id="264208428">
                   <density dataType="Float">1</density>
                   <friction dataType="Float">0.3</friction>
                   <parent dataType="ObjectRef">2165600913</parent>
@@ -554,892 +654,18 @@
                   <sensor dataType="Bool">false</sensor>
                   <vertices dataType="Array" type="Duality.Vector2[]" id="1908579960">
                     <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-6970.955</X>
-                      <Y dataType="Float">253.181763</Y>
+                      <X dataType="Float">-8254.277</X>
+                      <Y dataType="Float">-723.7211</Y>
                     </item>
                     <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-6931.24072</X>
-                      <Y dataType="Float">498.690063</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-6104.455</X>
-                      <Y dataType="Float">513.131836</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-6494.38037</X>
-                      <Y dataType="Float">375.9359</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="4223057682">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="3901025078">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-6584.64063</X>
-                      <Y dataType="Float">357.8838</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-6584.64063</X>
-                      <Y dataType="Float">513.131836</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-5761.466</X>
-                      <Y dataType="Float">513.131836</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-6082.79248</X>
-                      <Y dataType="Float">361.494263</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="2657594376">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="4058851156">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-6101.12158</X>
-                      <Y dataType="Float">514.590332</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-6111.14063</X>
-                      <Y dataType="Float">359.497467</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-4754.04639</X>
-                      <Y dataType="Float">-76.62753</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-4718.427</X>
-                      <Y dataType="Float">496.879639</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="3548541542">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="3576743514">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-4817.9126</X>
-                      <Y dataType="Float">497.683838</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-4810.692</X>
-                      <Y dataType="Float">-76.37244</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-4377.442</X>
-                      <Y dataType="Float">-101.645264</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-4088.6084</X>
-                      <Y dataType="Float">504.904663</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="2376822212">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="201383952">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-4395.49365</X>
-                      <Y dataType="Float">-112.476563</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-4363</X>
-                      <Y dataType="Float">512.1255</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-3438.7334</X>
-                      <Y dataType="Float">504.904663</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-3940.5813</X>
-                      <Y dataType="Float">-25.8265381</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="1584432138">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="2708813710">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-3976.79883</X>
-                      <Y dataType="Float">-35.9563</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-3565.21118</X>
-                      <Y dataType="Float">-7.072998</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-3279.98828</X>
-                      <Y dataType="Float">505.6062</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-3835.99243</X>
-                      <Y dataType="Float">483.943726</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="586757952">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="3948637132">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-3594.09473</X>
-                      <Y dataType="Float">-10.68335</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-2882.84253</X>
-                      <Y dataType="Float">-50.39795</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-2648.16528</X>
-                      <Y dataType="Float">498.385376</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-3453.28833</X>
-                      <Y dataType="Float">480.333252</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="3002538302">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="988006994">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-2887.084</X>
-                      <Y dataType="Float">-51.25232</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-2498.84766</X>
-                      <Y dataType="Float">-36.5623779</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-2274.30029</X>
-                      <Y dataType="Float">511.165527</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-2735.98657</X>
-                      <Y dataType="Float">485.982666</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="1780099612">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="4021106824">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-2516.444</X>
-                      <Y dataType="Float">-35.4326172</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-2004.39185</X>
-                      <Y dataType="Float">-134.065674</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-2291.89648</X>
-                      <Y dataType="Float">501.802368</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="3162388450">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="73289958">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-2008.58911</X>
-                      <Y dataType="Float">-138.262817</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-1309.76379</X>
-                      <Y dataType="Float">-226.402954</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-1286.67944</X>
-                      <Y dataType="Float">455.633667</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-2333.86816</X>
-                      <Y dataType="Float">487.1123</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="2608561912">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="1002639076">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-1326.33008</X>
-                      <Y dataType="Float">-223.464844</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-1194.11987</X>
-                      <Y dataType="Float">-227.662109</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-810.08075</X>
-                      <Y dataType="Float">490.0504</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-1424.963</X>
-                      <Y dataType="Float">458.571777</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="1111882166">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="3153575818">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-1196.21838</X>
-                      <Y dataType="Float">-233.957764</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-631.7019</X>
-                      <Y dataType="Float">-133.2262</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-604.4204</X>
-                      <Y dataType="Float">504.740479</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-910.8123</X>
-                      <Y dataType="Float">485.853271</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="3762474292">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="2195695392">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-650.58905</X>
-                      <Y dataType="Float">-135.3247</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">31.4476318</X>
-                      <Y dataType="Float">45.1525879</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-6.326721</X>
-                      <Y dataType="Float">500.5432</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-635.899048</X>
-                      <Y dataType="Float">492.148926</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="452320730">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="745375550">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">12.2632446</X>
-                      <Y dataType="Float">39.2592773</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">677.511353</X>
-                      <Y dataType="Float">284.79248</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">681.7085</X>
-                      <Y dataType="Float">498.847168</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">-59.0882874</X>
-                      <Y dataType="Float">496.748535</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="968767280">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="1611103708">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">662.8213</X>
-                      <Y dataType="Float">284.79248</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">1189.56348</X>
-                      <Y dataType="Float">431.692749</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">1183.26782</X>
-                      <Y dataType="Float">513.5371</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">648.1313</X>
-                      <Y dataType="Float">500.945679</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="1740425614">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="1914361474">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">1168.33948</X>
-                      <Y dataType="Float">420.787231</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">1928.02344</X>
-                      <Y dataType="Float">437.5758</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">1930.122</X>
-                      <Y dataType="Float">521.5188</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">1151.55078</X>
-                      <Y dataType="Float">502.6316</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="3754493196">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="4212903064">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">1928.845</X>
-                      <Y dataType="Float">435.107544</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">2675.9375</X>
-                      <Y dataType="Float">388.938965</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">2686.43018</X>
-                      <Y dataType="Float">516.9519</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">1920.45056</X>
-                      <Y dataType="Float">529.543457</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="2541104562">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="1474954774">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">2668.68628</X>
-                      <Y dataType="Float">388.700684</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">3280.46582</X>
-                      <Y dataType="Float">299.3899</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">3488.11377</X>
-                      <Y dataType="Float">515.96875</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">2675.38452</X>
-                      <Y dataType="Float">527.132568</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="2685201128">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="3934519668">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">3271.53467</X>
-                      <Y dataType="Float">301.622559</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">3742.64966</X>
-                      <Y dataType="Float">243.570557</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">3805.16748</X>
-                      <Y dataType="Float">513.735962</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">3360.8457</X>
-                      <Y dataType="Float">513.735962</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="4081376390">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="907333178">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">3727.02026</X>
-                      <Y dataType="Float">234.6394</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">3936.901</X>
-                      <Y dataType="Float">156.492432</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">4077.56543</X>
-                      <Y dataType="Float">147.561279</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">4224.92871</X>
-                      <Y dataType="Float">509.2705</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">3771.67578</X>
-                      <Y dataType="Float">500.339355</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="4110624932">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="487413680">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">4039.88672</X>
-                      <Y dataType="Float">137.711792</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">4455.182</X>
-                      <Y dataType="Float">-23.0478516</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">4752.141</X>
-                      <Y dataType="Float">497.1881</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">4100.17139</X>
-                      <Y dataType="Float">503.886475</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="103135786">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="1225832174">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">4410.527</X>
-                      <Y dataType="Float">-16.3494873</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">4807.96045</X>
-                      <Y dataType="Float">-270.8855</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">4941.927</X>
-                      <Y dataType="Float">117.616821</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">4459.648</X>
-                      <Y dataType="Float">367.687378</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="1795594144">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="3314732652">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">4800.16162</X>
-                      <Y dataType="Float">-261.4049</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5065.86133</X>
-                      <Y dataType="Float">-344.017578</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5181.966</X>
-                      <Y dataType="Float">-105.11084</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">4815.791</X>
-                      <Y dataType="Float">15.4588623</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="3275540190">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="1835545778">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5070.327</X>
-                      <Y dataType="Float">-348.483032</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5309.234</X>
-                      <Y dataType="Float">-368.578</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5418.63965</X>
-                      <Y dataType="Float">-93.94702</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5081.49072</X>
-                      <Y dataType="Float">-69.3864746</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="3845407356">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="3011082280">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5307.001</X>
-                      <Y dataType="Float">-361.879639</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5619.589</X>
-                      <Y dataType="Float">-301.594849</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5561.537</X>
-                      <Y dataType="Float">-71.61926</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5338.26</X>
-                      <Y dataType="Float">-69.3864746</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="1768754562">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="1531525574">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5601.63525</X>
-                      <Y dataType="Float">-308.0105</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5936.551</X>
-                      <Y dataType="Float">-245.49292</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5862.869</X>
-                      <Y dataType="Float">51.46582</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5478.83252</X>
-                      <Y dataType="Float">-46.7762451</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="3975020376">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="832035332">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5905.292</X>
-                      <Y dataType="Float">-247.725708</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">6117.40527</X>
-                      <Y dataType="Float">-245.49292</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">6126.33643</X>
-                      <Y dataType="Float">60.39685</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">5811.51563</X>
-                      <Y dataType="Float">35.8364258</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="217152982">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="3242333930">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">6104.009</X>
-                      <Y dataType="Float">-241.027344</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">6217.88037</X>
-                      <Y dataType="Float">-287.915649</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">6555.029</X>
-                      <Y dataType="Float">-252.191284</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">6615.31348</X>
-                      <Y dataType="Float">-28.9140625</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">6072.75</X>
-                      <Y dataType="Float">9.043091</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="4262029844">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="4081121600">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">6529.92</X>
-                      <Y dataType="Float">-251.713013</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">6686.214</X>
-                      <Y dataType="Float">-220.454224</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">6817.94727</X>
-                      <Y dataType="Float">-144.539917</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7034.52637</X>
-                      <Y dataType="Float">20.68518</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7257.803</X>
-                      <Y dataType="Float">197.074219</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7340.416</X>
-                      <Y dataType="Float">438.213623</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">6442.842</X>
-                      <Y dataType="Float">-19.5046387</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="2855306362">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="702289054">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7246.63965</X>
-                      <Y dataType="Float">179.212036</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7445.35645</X>
-                      <Y dataType="Float">275.2213</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7490.01172</X>
-                      <Y dataType="Float">420.351563</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7233.243</X>
-                      <Y dataType="Float">422.584229</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="330898960">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="2499167740">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7449.822</X>
-                      <Y dataType="Float">272.988525</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7541.36572</X>
-                      <Y dataType="Float">299.781738</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7646.30566</X>
-                      <Y dataType="Float">420.351563</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7407.39941</X>
-                      <Y dataType="Float">431.515381</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="1794646574">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="595890018">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7544.851</X>
-                      <Y dataType="Float">301.338379</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7647.31543</X>
-                      <Y dataType="Float">282.051025</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7699.15039</X>
-                      <Y dataType="Float">403.802856</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7568.96045</X>
-                      <Y dataType="Float">408.624634</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="1722529260">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="803162040">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7610.21875</X>
-                      <Y dataType="Float">283.292</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7749.153</X>
-                      <Y dataType="Float">183.048462</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7926.778</X>
-                      <Y dataType="Float">228.77356</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7682.324</X>
-                      <Y dataType="Float">397.60498</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="283517394">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="1019122038">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7747.12939</X>
-                      <Y dataType="Float">179.784912</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7963.44434</X>
-                      <Y dataType="Float">-66.42749</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">8072.48145</X>
-                      <Y dataType="Float">137.577026</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7884.30469</X>
-                      <Y dataType="Float">251.8899</Y>
-                    </item>
-                  </vertices>
-                </item>
-                <item dataType="Struct" type="Duality.Components.Physics.PolyShapeInfo" id="1884686280">
-                  <density dataType="Float">1</density>
-                  <friction dataType="Float">0.3</friction>
-                  <parent dataType="ObjectRef">2165600913</parent>
-                  <restitution dataType="Float">0.3</restitution>
-                  <sensor dataType="Bool">false</sensor>
-                  <vertices dataType="Array" type="Duality.Vector2[]" id="144379796">
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">7954.651</X>
-                      <Y dataType="Float">-61.15149</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">8183.277</X>
-                      <Y dataType="Float">-456.849976</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">8186.794</X>
-                      <Y dataType="Float">148.129028</Y>
-                    </item>
-                    <item dataType="Struct" type="Duality.Vector2">
-                      <X dataType="Float">8007.41064</X>
-                      <Y dataType="Float">190.336792</Y>
+                      <X dataType="Float">-7779.36035</X>
+                      <Y dataType="Float">-2944.87354</Y>
                     </item>
                   </vertices>
                 </item>
               </_items>
-              <_size dataType="Int">37</_size>
-              <_version dataType="Int">409</_version>
+              <_size dataType="Int">3</_size>
+              <_version dataType="Int">771</_version>
             </shapes>
           </item>
         </_items>
@@ -1452,7 +678,7 @@
           <keys dataType="Array" type="System.Object[]" id="1282053373">
             <item dataType="ObjectRef">2122539126</item>
             <item dataType="ObjectRef">2557544288</item>
-            <item dataType="ObjectRef">2240785942</item>
+            <item dataType="Type" id="4017855782" value="Duality.Components.Physics.RigidBody" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="1896174520">
             <item dataType="ObjectRef">1463139321</item>
@@ -1511,6 +737,510 @@
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
       <name dataType="String">Factories</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="1151356442">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="3687512132">
+        <_items dataType="Array" type="Duality.Component[]" id="3026753092" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="3511671374">
+            <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
+            <angleVel dataType="Float">0</angleVel>
+            <angleVelAbs dataType="Float">0</angleVelAbs>
+            <deriveAngle dataType="Bool">true</deriveAngle>
+            <gameobj dataType="ObjectRef">1151356442</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <parentTransform />
+            <pos dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-2475</Y>
+              <Z dataType="Float">2000</Z>
+            </pos>
+            <posAbs dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-2475</Y>
+              <Z dataType="Float">2000</Z>
+            </posAbs>
+            <scale dataType="Float">10</scale>
+            <scaleAbs dataType="Float">10</scaleAbs>
+            <vel dataType="Struct" type="Duality.Vector3" />
+            <velAbs dataType="Struct" type="Duality.Vector3" />
+          </item>
+          <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2793523010">
+            <active dataType="Bool">true</active>
+            <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+              <A dataType="Byte">255</A>
+              <B dataType="Byte">255</B>
+              <G dataType="Byte">255</G>
+              <R dataType="Byte">255</R>
+            </colorTint>
+            <customMat />
+            <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+            <gameobj dataType="ObjectRef">1151356442</gameobj>
+            <offset dataType="Int">0</offset>
+            <pixelGrid dataType="Bool">false</pixelGrid>
+            <rect dataType="Struct" type="Duality.Rect">
+              <H dataType="Float">904</H>
+              <W dataType="Float">1920</W>
+              <X dataType="Float">-960</X>
+              <Y dataType="Float">-452</Y>
+            </rect>
+            <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+            <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+              <contentPath dataType="String">Data\Images\backdrop\city_sky.Material.res</contentPath>
+            </sharedMat>
+            <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+          </item>
+        </_items>
+        <_size dataType="Int">2</_size>
+        <_version dataType="Int">2</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2937480854" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Object[]" id="3026120142">
+            <item dataType="ObjectRef">2122539126</item>
+            <item dataType="ObjectRef">2557544288</item>
+          </keys>
+          <values dataType="Array" type="System.Object[]" id="1740410186">
+            <item dataType="ObjectRef">3511671374</item>
+            <item dataType="ObjectRef">2793523010</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">3511671374</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="573840766">zwyrPgvE0EKYdb7m+z7zBQ==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">city_sky</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="2069499405">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1805243071">
+        <_items dataType="Array" type="Duality.Component[]" id="1928685998" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="134847041">
+            <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
+            <angleVel dataType="Float">0</angleVel>
+            <angleVelAbs dataType="Float">0</angleVelAbs>
+            <deriveAngle dataType="Bool">true</deriveAngle>
+            <gameobj dataType="ObjectRef">2069499405</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <parentTransform />
+            <pos dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-2450</Y>
+              <Z dataType="Float">1000</Z>
+            </pos>
+            <posAbs dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-2450</Y>
+              <Z dataType="Float">1000</Z>
+            </posAbs>
+            <scale dataType="Float">10</scale>
+            <scaleAbs dataType="Float">10</scaleAbs>
+            <vel dataType="Struct" type="Duality.Vector3" />
+            <velAbs dataType="Struct" type="Duality.Vector3" />
+          </item>
+          <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="3711665973">
+            <active dataType="Bool">true</active>
+            <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+              <A dataType="Byte">255</A>
+              <B dataType="Byte">255</B>
+              <G dataType="Byte">255</G>
+              <R dataType="Byte">255</R>
+            </colorTint>
+            <customMat />
+            <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+            <gameobj dataType="ObjectRef">2069499405</gameobj>
+            <offset dataType="Int">0</offset>
+            <pixelGrid dataType="Bool">false</pixelGrid>
+            <rect dataType="Struct" type="Duality.Rect">
+              <H dataType="Float">904</H>
+              <W dataType="Float">1920</W>
+              <X dataType="Float">-960</X>
+              <Y dataType="Float">-452</Y>
+            </rect>
+            <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+            <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+              <contentPath dataType="String">Data\Images\backdrop\city clouds.Material.res</contentPath>
+            </sharedMat>
+            <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+          </item>
+        </_items>
+        <_size dataType="Int">2</_size>
+        <_version dataType="Int">2</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="822761952" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Object[]" id="3095715189">
+            <item dataType="ObjectRef">2122539126</item>
+            <item dataType="ObjectRef">2557544288</item>
+          </keys>
+          <values dataType="Array" type="System.Object[]" id="3671785672">
+            <item dataType="ObjectRef">134847041</item>
+            <item dataType="ObjectRef">3711665973</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">134847041</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="382668735">YUo1g2+4iESDWkCQIPmA5A==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">city clouds</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="3374514786">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2665616556">
+        <_items dataType="Array" type="Duality.Component[]" id="2841266916" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="1439862422">
+            <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
+            <angleVel dataType="Float">0</angleVel>
+            <angleVelAbs dataType="Float">0</angleVelAbs>
+            <deriveAngle dataType="Bool">true</deriveAngle>
+            <gameobj dataType="ObjectRef">3374514786</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <parentTransform />
+            <pos dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-2450</Y>
+              <Z dataType="Float">500</Z>
+            </pos>
+            <posAbs dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-2450</Y>
+              <Z dataType="Float">500</Z>
+            </posAbs>
+            <scale dataType="Float">10</scale>
+            <scaleAbs dataType="Float">10</scaleAbs>
+            <vel dataType="Struct" type="Duality.Vector3" />
+            <velAbs dataType="Struct" type="Duality.Vector3" />
+          </item>
+          <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="721714058">
+            <active dataType="Bool">true</active>
+            <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+              <A dataType="Byte">255</A>
+              <B dataType="Byte">255</B>
+              <G dataType="Byte">255</G>
+              <R dataType="Byte">255</R>
+            </colorTint>
+            <customMat />
+            <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+            <gameobj dataType="ObjectRef">3374514786</gameobj>
+            <offset dataType="Int">0</offset>
+            <pixelGrid dataType="Bool">false</pixelGrid>
+            <rect dataType="Struct" type="Duality.Rect">
+              <H dataType="Float">904</H>
+              <W dataType="Float">1920</W>
+              <X dataType="Float">-960</X>
+              <Y dataType="Float">-452</Y>
+            </rect>
+            <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+            <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+              <contentPath dataType="String">Data\Images\backdrop\city buildings3.Material.res</contentPath>
+            </sharedMat>
+            <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+          </item>
+        </_items>
+        <_size dataType="Int">2</_size>
+        <_version dataType="Int">2</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1539605942" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Object[]" id="3950367974">
+            <item dataType="ObjectRef">2122539126</item>
+            <item dataType="ObjectRef">2557544288</item>
+          </keys>
+          <values dataType="Array" type="System.Object[]" id="282353978">
+            <item dataType="ObjectRef">1439862422</item>
+            <item dataType="ObjectRef">721714058</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">1439862422</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="3210263142">S0E7/BgU10O9ByG1UriV/g==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">city buildings3</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="1260652659">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="3017087425">
+        <_items dataType="Array" type="Duality.Component[]" id="2652347566" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="3620967591">
+            <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
+            <angleVel dataType="Float">0</angleVel>
+            <angleVelAbs dataType="Float">0</angleVelAbs>
+            <deriveAngle dataType="Bool">true</deriveAngle>
+            <gameobj dataType="ObjectRef">1260652659</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <parentTransform />
+            <pos dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-2450</Y>
+              <Z dataType="Float">300</Z>
+            </pos>
+            <posAbs dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-2450</Y>
+              <Z dataType="Float">300</Z>
+            </posAbs>
+            <scale dataType="Float">10</scale>
+            <scaleAbs dataType="Float">10</scaleAbs>
+            <vel dataType="Struct" type="Duality.Vector3" />
+            <velAbs dataType="Struct" type="Duality.Vector3" />
+          </item>
+          <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="2902819227">
+            <active dataType="Bool">true</active>
+            <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+              <A dataType="Byte">255</A>
+              <B dataType="Byte">255</B>
+              <G dataType="Byte">255</G>
+              <R dataType="Byte">255</R>
+            </colorTint>
+            <customMat />
+            <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+            <gameobj dataType="ObjectRef">1260652659</gameobj>
+            <offset dataType="Int">0</offset>
+            <pixelGrid dataType="Bool">false</pixelGrid>
+            <rect dataType="Struct" type="Duality.Rect">
+              <H dataType="Float">904</H>
+              <W dataType="Float">1920</W>
+              <X dataType="Float">-960</X>
+              <Y dataType="Float">-452</Y>
+            </rect>
+            <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+            <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+              <contentPath dataType="String">Data\Images\backdrop\city buildings2.Material.res</contentPath>
+            </sharedMat>
+            <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+          </item>
+        </_items>
+        <_size dataType="Int">2</_size>
+        <_version dataType="Int">2</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="2051635424" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Object[]" id="2853499403">
+            <item dataType="ObjectRef">2122539126</item>
+            <item dataType="ObjectRef">2557544288</item>
+          </keys>
+          <values dataType="Array" type="System.Object[]" id="1670499016">
+            <item dataType="ObjectRef">3620967591</item>
+            <item dataType="ObjectRef">2902819227</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">3620967591</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="2363844033">GES2rJIe/UyBi/nWI/6dlg==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">city buildings2</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="2754149781">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="101494759">
+        <_items dataType="Array" type="Duality.Component[]" id="4086990158" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="819497417">
+            <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
+            <angleVel dataType="Float">0</angleVel>
+            <angleVelAbs dataType="Float">0</angleVelAbs>
+            <deriveAngle dataType="Bool">true</deriveAngle>
+            <gameobj dataType="ObjectRef">2754149781</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <parentTransform />
+            <pos dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-2450</Y>
+              <Z dataType="Float">100</Z>
+            </pos>
+            <posAbs dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-2450</Y>
+              <Z dataType="Float">100</Z>
+            </posAbs>
+            <scale dataType="Float">10</scale>
+            <scaleAbs dataType="Float">10</scaleAbs>
+            <vel dataType="Struct" type="Duality.Vector3" />
+            <velAbs dataType="Struct" type="Duality.Vector3" />
+          </item>
+          <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="101349053">
+            <active dataType="Bool">true</active>
+            <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+              <A dataType="Byte">255</A>
+              <B dataType="Byte">255</B>
+              <G dataType="Byte">255</G>
+              <R dataType="Byte">255</R>
+            </colorTint>
+            <customMat />
+            <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+            <gameobj dataType="ObjectRef">2754149781</gameobj>
+            <offset dataType="Int">0</offset>
+            <pixelGrid dataType="Bool">false</pixelGrid>
+            <rect dataType="Struct" type="Duality.Rect">
+              <H dataType="Float">904</H>
+              <W dataType="Float">1920</W>
+              <X dataType="Float">-960</X>
+              <Y dataType="Float">-452</Y>
+            </rect>
+            <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+            <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+              <contentPath dataType="String">Data\Images\backdrop\city buildings1.Material.res</contentPath>
+            </sharedMat>
+            <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+          </item>
+        </_items>
+        <_size dataType="Int">2</_size>
+        <_version dataType="Int">2</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3972268928" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Object[]" id="954946765">
+            <item dataType="ObjectRef">2122539126</item>
+            <item dataType="ObjectRef">2557544288</item>
+          </keys>
+          <values dataType="Array" type="System.Object[]" id="530338488">
+            <item dataType="ObjectRef">819497417</item>
+            <item dataType="ObjectRef">101349053</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">819497417</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="1693038247">FrREvWzqqkm5ZfMovvyeKQ==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">city buildings1</name>
+      <parent />
+      <prefabLink />
+    </item>
+    <item dataType="Struct" type="Duality.GameObject" id="2088299322">
+      <active dataType="Bool">true</active>
+      <children />
+      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="119492516">
+        <_items dataType="Array" type="Duality.Component[]" id="247612612" length="4">
+          <item dataType="Struct" type="Duality.Components.Transform" id="153646958">
+            <active dataType="Bool">true</active>
+            <angle dataType="Float">0</angle>
+            <angleAbs dataType="Float">0</angleAbs>
+            <angleVel dataType="Float">0</angleVel>
+            <angleVelAbs dataType="Float">0</angleVelAbs>
+            <deriveAngle dataType="Bool">true</deriveAngle>
+            <gameobj dataType="ObjectRef">2088299322</gameobj>
+            <ignoreParent dataType="Bool">false</ignoreParent>
+            <parentTransform />
+            <pos dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-2450</Y>
+              <Z dataType="Float">50</Z>
+            </pos>
+            <posAbs dataType="Struct" type="Duality.Vector3">
+              <X dataType="Float">0</X>
+              <Y dataType="Float">-2450</Y>
+              <Z dataType="Float">50</Z>
+            </posAbs>
+            <scale dataType="Float">10</scale>
+            <scaleAbs dataType="Float">10</scaleAbs>
+            <vel dataType="Struct" type="Duality.Vector3" />
+            <velAbs dataType="Struct" type="Duality.Vector3" />
+          </item>
+          <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="3730465890">
+            <active dataType="Bool">true</active>
+            <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+              <A dataType="Byte">255</A>
+              <B dataType="Byte">255</B>
+              <G dataType="Byte">255</G>
+              <R dataType="Byte">255</R>
+            </colorTint>
+            <customMat />
+            <flipMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+FlipMode" name="None" value="0" />
+            <gameobj dataType="ObjectRef">2088299322</gameobj>
+            <offset dataType="Int">0</offset>
+            <pixelGrid dataType="Bool">false</pixelGrid>
+            <rect dataType="Struct" type="Duality.Rect">
+              <H dataType="Float">904</H>
+              <W dataType="Float">1920</W>
+              <X dataType="Float">-960</X>
+              <Y dataType="Float">-452</Y>
+            </rect>
+            <rectMode dataType="Enum" type="Duality.Components.Renderers.SpriteRenderer+UVMode" name="Stretch" value="0" />
+            <sharedMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]">
+              <contentPath dataType="String">Data\Images\backdrop\city grass and trees.Material.res</contentPath>
+            </sharedMat>
+            <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+          </item>
+        </_items>
+        <_size dataType="Int">2</_size>
+        <_version dataType="Int">2</_version>
+      </compList>
+      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="48815894" surrogate="true">
+        <header />
+        <body>
+          <keys dataType="Array" type="System.Object[]" id="1454629358">
+            <item dataType="ObjectRef">2122539126</item>
+            <item dataType="ObjectRef">2557544288</item>
+          </keys>
+          <values dataType="Array" type="System.Object[]" id="2502465482">
+            <item dataType="ObjectRef">153646958</item>
+            <item dataType="ObjectRef">3730465890</item>
+          </values>
+        </body>
+      </compMap>
+      <compTransform dataType="ObjectRef">153646958</compTransform>
+      <identifier dataType="Struct" type="System.Guid" surrogate="true">
+        <header>
+          <data dataType="Array" type="System.Byte[]" id="1025155550">3Ki7tMMujkO96uakayZQaA==</data>
+        </header>
+        <body />
+      </identifier>
+      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
+      <name dataType="String">city grass and trees</name>
       <parent />
       <prefabLink />
     </item>
