@@ -1,8 +1,8 @@
 [Core] Msg: Running DualityLauncher with flags: 
 [Core] Msg: Using 'DefaultPluginLoader' to load plugins.
 [Core] Msg: Environment Info: 
-              Current Directory: C:\devTools\RainingPackages\RainingPackages
-              Command Line: "C:\devTools\RainingPackages\RainingPackages\Source\Code\..\..\DualityLauncher.exe" 
+              Current Directory: C:\git\RainingPackages
+              Command Line: "C:\git\RainingPackages\Source\Code\..\..\DualityLauncher.exe" 
               Operating System: Microsoft Windows NT 6.1.7601 Service Pack 1 (Windows 7)
               64 Bit OS: True
               64 Bit Process: True
@@ -53,7 +53,7 @@
 [Core] Msg:   Plugins\DotNetFrameworkBackend.core.dll...
 [Core] Msg:     Assembly loaded: DotNetFrameworkBackend.core 2.1.1.0
 [Core] Msg:   Plugins\GamePlugin.core.dll...
-[Core] Msg:     Assembly loaded: GamePlugin.core 1.0.0.0
+[Core] Msg:     Assembly loaded: GamePlugin.core 0.0.1.0
 [Core] Msg: Loading auxiliary libraries...
 [Core] Msg: Initializing ISystemBackend...
 [Core] Msg:   Assembly loaded: System.Text.RegularExpressions 4.0.0.0
@@ -121,7 +121,8 @@
 [Core] Msg:   ...done!
 [Core] Msg: Assembly loaded: FarseerDuality 4.1.1.0
 [Core] Msg: Loading Resource 'Data\Scene.Scene.res'
-[Core] Msg:   Loading Resource 'Data\player.Prefab.res'
+[Game] Msg:   Gravity: 6250, jump velocity: 2500
+[Game] Msg: Gravity: 6250, jump velocity: 2500
 [Core] Msg: Loading Resource 'Data\drone.Prefab.res'
 [Core] Msg: Loading Resource 'Data\package.Prefab.res'
 [Core] Msg: Loading Resource 'Data\Images\ground-01.Material.res'
@@ -133,6 +134,24 @@
 [Core] Msg: Loading Resource 'Data\Images\ground-00.Material.res'
 [Core] Msg:   Loading Resource 'Data\Images\ground-00.Texture.res'
 [Core] Msg:     Loading Resource 'Data\Images\ground-00.Pixmap.res'
+[Core] Msg: Loading Resource 'Data\Images\backdrop\city_sky.Material.res'
+[Core] Msg:   Loading Resource 'Data\Images\backdrop\city_sky.Texture.res'
+[Core] Msg:     Loading Resource 'Data\Images\backdrop\city_sky.Pixmap.res'
+[Core] Msg: Loading Resource 'Data\Images\backdrop\city clouds.Material.res'
+[Core] Msg:   Loading Resource 'Data\Images\backdrop\city clouds.Texture.res'
+[Core] Msg:     Loading Resource 'Data\Images\backdrop\city clouds.Pixmap.res'
+[Core] Msg: Loading Resource 'Data\Images\backdrop\city buildings3.Material.res'
+[Core] Msg:   Loading Resource 'Data\Images\backdrop\city buildings3.Texture.res'
+[Core] Msg:     Loading Resource 'Data\Images\backdrop\city buildings3.Pixmap.res'
+[Core] Msg: Loading Resource 'Data\Images\backdrop\city buildings2.Material.res'
+[Core] Msg:   Loading Resource 'Data\Images\backdrop\city buildings2.Texture.res'
+[Core] Msg:     Loading Resource 'Data\Images\backdrop\city buildings2.Pixmap.res'
+[Core] Msg: Loading Resource 'Data\Images\backdrop\city buildings1.Material.res'
+[Core] Msg:   Loading Resource 'Data\Images\backdrop\city buildings1.Texture.res'
+[Core] Msg:     Loading Resource 'Data\Images\backdrop\city buildings1.Pixmap.res'
+[Core] Msg: Loading Resource 'Data\Images\backdrop\city grass and trees.Material.res'
+[Core] Msg:   Loading Resource 'Data\Images\backdrop\city grass and trees.Texture.res'
+[Core] Msg:     Loading Resource 'Data\Images\backdrop\city grass and trees.Pixmap.res'
 [Core] Msg: Determining OpenGL context capabilities...
 [Core] Msg:   Requested 16 MSAA samples, but got 8 samples instead.
 [Core] Msg: Loading Resource 'Data\Images\drone.Material.res'

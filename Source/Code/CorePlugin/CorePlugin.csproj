@@ -69,6 +69,8 @@
     <Compile Include="Factories\DroneFactory.cs" />
     <Compile Include="GameObjects\DroneControl.cs" />
     <Compile Include="GameObjects\PackageControl.cs" />
+    <Compile Include="GameObjects\PlayerController.cs" />
+    <Compile Include="GameObjects\RaycastController.cs" />
     <Compile Include="Interfaces\IClickable.cs" />
     <Compile Include="Interfaces\IDespawnable.cs" />
     <Compile Include="Interfaces\IEventSubscriber.cs" />

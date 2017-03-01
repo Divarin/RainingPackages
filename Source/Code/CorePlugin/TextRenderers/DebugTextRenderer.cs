@@ -38,7 +38,7 @@ namespace RainingPackages.TextRenderers
 
             Canvas canvas = new Canvas(device, _buffer);
             canvas.State.SetMaterial(new BatchInfo(DrawTechnique.Alpha, ColorRgba.White));
-            canvas.State.ColorTint = ColorRgba.Green;//.WithAlpha(0.5f);
+            canvas.State.ColorTint = ColorRgba.Black;//.WithAlpha(0.5f);
 
             //if (Font != null)
             //    canvas.State.TextFont = Font;
