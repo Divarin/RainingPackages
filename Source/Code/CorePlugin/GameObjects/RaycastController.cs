@@ -3,6 +3,8 @@ using Duality.Components.Physics;
 using Duality.Components.Renderers;
 using RainingPackages.EventAggregation;
 using RainingPackages.EventAggregation.EventDetails;
+using RainingPackages.Interfaces;
+using System;
 
 namespace RainingPackages.GameObjects
 {
@@ -87,7 +89,7 @@ namespace RainingPackages.GameObjects
                     if (i == 0 && slopeAngle <= MaxClimbAngle)
                     {
                         float distanceToSlopeStart = 0;
-                        if (slopeAngle != _collisions.slopeAngleOld)
+                        if (slopeAngle != _collisions.SlopeAngleOld)
                         {
                             distanceToSlopeStart = distanceToSlopeStart - SkinWidth;
                             velocity.X -= distanceToSlopeStart * directionX;
@@ -96,7 +98,7 @@ namespace RainingPackages.GameObjects
                         velocity.X += distanceToSlopeStart * directionX;
                     }
 
-                    if (_collisions.climbingSlope || slopeAngle > MaxClimbAngle)
+                    if (_collisions.ClimbingSlope || slopeAngle > MaxClimbAngle)
                     {
                         velocity.X = (distance - SkinWidth) * directionX;
                         rayLength = distance;
@@ -106,14 +108,18 @@ namespace RainingPackages.GameObjects
                         //    velocity.Y = -1 * MathF.Tan(MathF.DegToRad(_collisions.slopeAngle)) * MathF.Abs(velocity.X);
                         //}
 
-                        _collisions.right = directionX == 1;
-                        _collisions.left = directionX == -1;
+                        ITouchable touching = rayCastData.Body.GameObj.GetComponent<ITouchable>();
+                        if (touching != null)
+                            _collisions.Touching = touching;
+
+                        _collisions.Right = directionX == 1;
+                        _collisions.Left = directionX == -1;
 
                         if (SHOW_DEBUG_MESSAGES)
                         {
-                            if (_collisions.right)
+                            if (_collisions.Right)
                                 EventAggregator.AnnounceEvent(new DebugMessageEvent("Collision right"));
-                            if (_collisions.left)
+                            if (_collisions.Left)
                                 EventAggregator.AnnounceEvent(new DebugMessageEvent("Collision left"));
                         }
                     }
@@ -147,14 +153,17 @@ namespace RainingPackages.GameObjects
                     //{
                     //    velocity.X = velocity.Y / MathF.Tan(MathF.DegToRad(_collisions.slopeAngle)) * MathF.Sign(velocity.X);
                     //}
+                    ITouchable touching = rayCastData.Body.GameObj.GetComponent<ITouchable>();
+                    if (touching != null)
+                        _collisions.Touching = touching;
 
-                    _collisions.below = directionY == 1;
-                    _collisions.above = directionY == -1;
+                    _collisions.Below = directionY == 1;
+                    _collisions.Above = directionY == -1;
                     if (SHOW_DEBUG_MESSAGES)
                     {
-                        if (_collisions.below)
+                        if (_collisions.Below)
                             EventAggregator.AnnounceEvent(new DebugMessageEvent("Collison below"));
-                        if (_collisions.above)
+                        if (_collisions.Above)
                             EventAggregator.AnnounceEvent(new DebugMessageEvent("Collision above"));
                     }
                 }
@@ -174,9 +183,9 @@ namespace RainingPackages.GameObjects
             {
                 velocity.Y = velocity.Y = climbVelocityY;
                 velocity.X = MathF.Cos(slopeRads) * moveDistance * MathF.Sign(velocity.X);
-                _collisions.below = true;
-                _collisions.climbingSlope = true;
-                _collisions.slopeAngle = slopeAngle;
+                _collisions.Below = true;
+                _collisions.ClimbingSlope = true;
+                _collisions.SlopeAngle = slopeAngle;
 
                 if (SHOW_DEBUG_MESSAGES)
                     EventAggregator.AnnounceEvent(new DebugMessageEvent($"Climbing slope at {slopeAngle} deg."));
@@ -211,8 +220,8 @@ namespace RainingPackages.GameObjects
                             velocity.X = MathF.Cos(slopeRadians) * moveDistance * MathF.Sign(velocity.X);
                             velocity.Y += descentVelocityY;
 
-                            _collisions.slopeAngle = slopeAngle;
-                            _collisions.descendingSlope = true;
+                            _collisions.SlopeAngle = slopeAngle;
+                            _collisions.DescendingSlope = true;
 
                             if (SHOW_DEBUG_MESSAGES)
                                 EventAggregator.AnnounceEvent(new DebugMessageEvent($"Descending slope at {slopeAngle} deg."));
@@ -271,20 +280,27 @@ namespace RainingPackages.GameObjects
             _verticalRaySpacing = shrinkedBounds.W / (VerticalRayCount - 1);
         }
 
-        public struct CollisionInfo
+        public class CollisionInfo
         {
-            public bool above, below, left, right;            
-            public float slopeAngle, slopeAngleOld;
-            public bool climbingSlope;
-            public bool descendingSlope;
+            public bool Above { get; set; }
+            public bool Below { get; set; }
+            public bool Left { get; set; }
+            public bool Right { get; set; }
+            public float SlopeAngle { get; set; }
+            public float SlopeAngleOld { get; set; }
+            public bool ClimbingSlope { get; set; }
+            public bool DescendingSlope { get; set; }
+            public ITouchable Touching { get; set; }
 
             public void Reset()
             {
-                above = below = left = right = false;
-                slopeAngleOld = slopeAngle;
-                climbingSlope = descendingSlope = false;
-                slopeAngle = 0;
+                Above = Below = Left = Right = false;
+                SlopeAngleOld = SlopeAngle;
+                ClimbingSlope = DescendingSlope = false;
+                SlopeAngle = 0;
+                Touching = null;
             }
+            
         }
 
         private struct RayCastOrigins

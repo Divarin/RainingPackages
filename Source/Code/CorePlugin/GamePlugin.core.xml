@@ -14,6 +14,11 @@
             How quickly the drone raises or lowers throttle
             </summary>
         </member>
+        <member name="T:RainingPackages.Interfaces.ITouchable">
+            <summary>
+            An interface for any object which responds when it makes physical contact with another object
+            </summary>
+        </member>
         <member name="T:RainingPackages.RainingPackagesCorePlugin">
             <summary>
             Defines a Duality core plugin.

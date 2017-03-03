@@ -274,7 +274,6 @@
           <item dataType="Struct" type="RainingPackages.GameObjects.PlayerController" id="2566220740">
             <_isJumping dataType="Bool">false</_isJumping>
             <_itemBeingCarried />
-            <_lastItemTouchedRef />
             <_x003C_AccelerationAirborne_x003E_k__BackingField dataType="Float">25</_x003C_AccelerationAirborne_x003E_k__BackingField>
             <_x003C_AccelerationGrounded_x003E_k__BackingField dataType="Float">100</_x003C_AccelerationGrounded_x003E_k__BackingField>
             <_x003C_JumpHeight_x003E_k__BackingField dataType="Float">500</_x003C_JumpHeight_x003E_k__BackingField>
@@ -408,7 +407,7 @@
             <_texts dataType="Struct" type="System.Collections.Generic.List`1[[System.String]]" id="2875919821">
               <_items dataType="Array" type="System.String[]" id="189741606" length="0" />
               <_size dataType="Int">0</_size>
-              <_version dataType="Int">144864</_version>
+              <_version dataType="Int">143487</_version>
             </_texts>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">2437817580</gameobj>
@@ -1334,164 +1333,6 @@
       <name dataType="String">city grass and trees</name>
       <parent />
       <prefabLink />
-    </item>
-    <item dataType="Struct" type="Duality.GameObject" id="4075851717">
-      <active dataType="Bool">true</active>
-      <children />
-      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="1658277559">
-        <_items dataType="Array" type="Duality.Component[]" id="4076741518">
-          <item dataType="Struct" type="Duality.Components.Transform" id="2141199353">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">4075851717</gameobj>
-          </item>
-          <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="1423050989">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">4075851717</gameobj>
-          </item>
-          <item dataType="Struct" type="Duality.Components.Physics.RigidBody" id="2843660945">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">4075851717</gameobj>
-          </item>
-          <item dataType="Struct" type="RainingPackages.GameObjects.ItemController" id="3757327255">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">4075851717</gameobj>
-          </item>
-        </_items>
-        <_size dataType="Int">4</_size>
-        <_version dataType="Int">4</_version>
-      </compList>
-      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3059897152" surrogate="true">
-        <header />
-        <body>
-          <keys dataType="Array" type="System.Object[]" id="1478456573">
-            <item dataType="ObjectRef">2122539126</item>
-            <item dataType="ObjectRef">2557544288</item>
-            <item dataType="ObjectRef">3304788104</item>
-            <item dataType="Type" id="1061297446" value="RainingPackages.GameObjects.ItemController" />
-          </keys>
-          <values dataType="Array" type="System.Object[]" id="2052510648">
-            <item dataType="ObjectRef">2141199353</item>
-            <item dataType="ObjectRef">1423050989</item>
-            <item dataType="ObjectRef">2843660945</item>
-            <item dataType="ObjectRef">3757327255</item>
-          </values>
-        </body>
-      </compMap>
-      <compTransform dataType="ObjectRef">2141199353</compTransform>
-      <identifier dataType="Struct" type="System.Guid" surrogate="true">
-        <header>
-          <data dataType="Array" type="System.Byte[]" id="1198676951">KMAqQdq9vU+SoQ42pKVTUA==</data>
-        </header>
-        <body />
-      </identifier>
-      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">item001-gardenGnome</name>
-      <parent />
-      <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="1727030421">
-        <changes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.PrefabLink+VarMod]]" id="2273744948">
-          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="6116516" length="4">
-            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="2734024648">
-                <_items dataType="Array" type="System.Int32[]" id="1284977260"></_items>
-                <_size dataType="Int">0</_size>
-                <_version dataType="Int">1</_version>
-              </childIndex>
-              <componentType dataType="ObjectRef">2122539126</componentType>
-              <prop dataType="MemberInfo" id="2574998238" value="P:Duality.Components.Transform:RelativePos" />
-              <val dataType="Struct" type="Duality.Vector3">
-                <X dataType="Float">-1000</X>
-                <Y dataType="Float">0</Y>
-                <Z dataType="Float">0</Z>
-              </val>
-            </item>
-          </_items>
-          <_size dataType="Int">1</_size>
-          <_version dataType="Int">147</_version>
-        </changes>
-        <obj dataType="ObjectRef">4075851717</obj>
-        <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
-          <contentPath dataType="String">Data\itemPrefabs\item001-gardenGnome.Prefab.res</contentPath>
-        </prefab>
-      </prefabLink>
-    </item>
-    <item dataType="Struct" type="Duality.GameObject" id="3332898516">
-      <active dataType="Bool">true</active>
-      <children />
-      <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="3373128426">
-        <_items dataType="Array" type="Duality.Component[]" id="3290700064">
-          <item dataType="Struct" type="Duality.Components.Transform" id="1398246152">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">3332898516</gameobj>
-          </item>
-          <item dataType="Struct" type="Duality.Components.Renderers.SpriteRenderer" id="680097788">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">3332898516</gameobj>
-          </item>
-          <item dataType="Struct" type="Duality.Components.Physics.RigidBody" id="2100707744">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">3332898516</gameobj>
-          </item>
-          <item dataType="Struct" type="RainingPackages.GameObjects.ItemController" id="3014374054">
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">3332898516</gameobj>
-          </item>
-        </_items>
-        <_size dataType="Int">4</_size>
-        <_version dataType="Int">4</_version>
-      </compList>
-      <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="1337777114" surrogate="true">
-        <header />
-        <body>
-          <keys dataType="Array" type="System.Object[]" id="3348906960">
-            <item dataType="ObjectRef">2122539126</item>
-            <item dataType="ObjectRef">2557544288</item>
-            <item dataType="ObjectRef">3304788104</item>
-            <item dataType="ObjectRef">1061297446</item>
-          </keys>
-          <values dataType="Array" type="System.Object[]" id="173871726">
-            <item dataType="ObjectRef">1398246152</item>
-            <item dataType="ObjectRef">680097788</item>
-            <item dataType="ObjectRef">2100707744</item>
-            <item dataType="ObjectRef">3014374054</item>
-          </values>
-        </body>
-      </compMap>
-      <compTransform dataType="ObjectRef">1398246152</compTransform>
-      <identifier dataType="Struct" type="System.Guid" surrogate="true">
-        <header>
-          <data dataType="Array" type="System.Byte[]" id="2923387820">aLZ5Wd6LDkiRWRRD16dvsg==</data>
-        </header>
-        <body />
-      </identifier>
-      <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">item002-camera</name>
-      <parent />
-      <prefabLink dataType="Struct" type="Duality.Resources.PrefabLink" id="3353027402">
-        <changes dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Resources.PrefabLink+VarMod]]" id="3536746944">
-          <_items dataType="Array" type="Duality.Resources.PrefabLink+VarMod[]" id="186931996" length="4">
-            <item dataType="Struct" type="Duality.Resources.PrefabLink+VarMod">
-              <childIndex dataType="Struct" type="System.Collections.Generic.List`1[[System.Int32]]" id="3226101960">
-                <_items dataType="ObjectRef">1284977260</_items>
-                <_size dataType="Int">0</_size>
-                <_version dataType="Int">1</_version>
-              </childIndex>
-              <componentType dataType="ObjectRef">2122539126</componentType>
-              <prop dataType="ObjectRef">2574998238</prop>
-              <val dataType="Struct" type="Duality.Vector3">
-                <X dataType="Float">1000</X>
-                <Y dataType="Float">0</Y>
-                <Z dataType="Float">0</Z>
-              </val>
-            </item>
-          </_items>
-          <_size dataType="Int">1</_size>
-          <_version dataType="Int">15</_version>
-        </changes>
-        <obj dataType="ObjectRef">3332898516</obj>
-        <prefab dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Prefab]]">
-          <contentPath dataType="String">Data\itemPrefabs\item002-camera.Prefab.res</contentPath>
-        </prefab>
-      </prefabLink>
     </item>
   </serializeObj>
   <visibilityStrategy dataType="Struct" type="Duality.Components.DefaultRendererVisibilityStrategy" id="2035693768" />

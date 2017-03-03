@@ -1,22 +1,26 @@
 ﻿using Duality;
 using Duality.Components.Physics;
+using Duality.Resources;
+using RainingPackages.Enums;
 using RainingPackages.Extensions;
 using RainingPackages.Interfaces;
 using System;
-using RainingPackages.Enums;
 
 namespace RainingPackages.GameObjects
 {
     [RequiredComponent(typeof(RigidBody))]
-    public class PackageControl : Component, ICmpUpdatable, ICmpCollisionListener, IClickable, IDespawnable
+    public class PackageControl : Component, ICmpUpdatable, ICmpCollisionListener, IClickable, IDespawnable, ITouchable
     {
 
         private static readonly Vector3 _offsetPositionFromDrone = new Vector3(0, -102, 0);
         private WeakReference<DroneControl> _attachedDroneRef = null;
         private bool _isDespawning = false;
+        private Prefab _packageContentPrefab = null;
+        private bool _respondedToTouch = false;
 
-        public void AttachToDrone(DroneControl drone)
+        public void AttachToDrone(DroneControl drone, Prefab packageContentPrefab)
         {
+            _packageContentPrefab = packageContentPrefab;
             _attachedDroneRef = new WeakReference<DroneControl>(drone);
             PositionToDrone(drone);
         }
@@ -87,6 +91,21 @@ namespace RainingPackages.GameObjects
                     drone.Despawn();
                 }
                 GameObj.ParentScene.RemoveObject(GameObj);
+            }
+        }
+
+        public void Touch(Component touchedBy)
+        {
+            if (touchedBy is PlayerController && !_respondedToTouch)
+            {
+                var content = _packageContentPrefab.Instantiate();
+                content.Transform.Pos = GameObj.Transform.Pos.CloneVector3(offset: new Vector3(0, 300, 0));
+                var scene = GameObj.ParentScene;
+                scene.RemoveObject(GameObj);
+                scene.AddObject(content);
+                var body = content.GetComponent<RigidBody>();
+                body.ApplyLocalForce(new Vector2(0, -1500f * Time.TimeMult));
+                _respondedToTouch = true;
             }
         }
     }

@@ -1,8 +1,6 @@
 ﻿using Duality;
 using Duality.Components.Physics;
 using Duality.Resources;
-using RainingPackages.EventAggregation;
-using RainingPackages.EventAggregation.EventDetails;
 using RainingPackages.GameObjects;
 using System;
 
@@ -47,17 +45,27 @@ namespace RainingPackages.Factories
 
             // Add package
             {
-                ContentRef<Prefab> packageRef = ContentProvider.RequestContent<Prefab>(@"Data\package.Prefab.res");
+                ContentRef<Prefab> packageRef = ContentProvider.RequestContent<Prefab>(@"Data\package.Prefab.res");                
                 Prefab packagePrefab = packageRef.Res;
+
+                ContentRef<Prefab> packageContentRef = ContentProvider.RequestContent<Prefab>(SelectPackageContentPrefabResourceFile());
+                Prefab packageContentPrefab = packageContentRef.Res;
+
                 GameObject package = packagePrefab.Instantiate();
                 PackageControl packageControl = package.GetComponent<PackageControl>();
-                packageControl.AttachToDrone(droneControl);
+                packageControl.AttachToDrone(droneControl, packageContentPrefab);
                 droneControl.AttachPackage(packageControl);
 
                 Scene.Current.AddObject(package);
             }
 
             Scene.Current.AddObject(drone);
+        }
+
+        private string SelectPackageContentPrefabResourceFile()
+        {
+            int i = random.Next(0, _itemPrefabList.Length);
+            return @"Data\itemPrefabs\" + _itemPrefabList[i] + ".Prefab.res";
         }
 
         public void OnUpdate()
@@ -69,5 +77,11 @@ namespace RainingPackages.Factories
                 //FactoryEnabled = false;
             }
         }
+
+        private static readonly string[] _itemPrefabList = new string[]
+        {
+            "item001-gardenGnome",
+            "item002-camera"
+        };
     }
 }
