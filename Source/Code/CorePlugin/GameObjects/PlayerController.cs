@@ -30,33 +30,12 @@ namespace RainingPackages.GameObjects
         private bool _isAiming = false;
         private float _aimingAngle = Vector2.UnitY.Angle;
         private float _aimingStrength = 0;
-
-        private const float MIN_ITEM_PICKUP_DISTANCE = 300;
+        
         private int _lastPlayerDirection = 1;
 
         private Vector2 velocity;
         private ItemController _itemBeingCarried = null;
-
-        private WeakReference<ItemController> _lastItemTouchedRef = null;
-        private ItemController LastItemTouched
-        {
-            get
-            {
-                ItemController item;
-                if (_lastItemTouchedRef != null && _lastItemTouchedRef.TryGetTarget(out item))
-                    return item;
-                return null;
-            }
-            set
-            {
-                if (value != null)
-                    _lastItemTouchedRef = new WeakReference<ItemController>(value);
-                else
-                    _lastItemTouchedRef = null;
-            }
-        }
-
-
+        
         private RaycastController RaycastController
         {
             get
@@ -84,16 +63,16 @@ namespace RainingPackages.GameObjects
                 _lastPlayerDirection = 1;
             }
 
-            if (PlayerInput.Hit(GameAction.Use) && _itemBeingCarried != LastItemTouched)
+            if (PlayerInput.Hit(GameAction.Use))// && _itemBeingCarried != LastItemTouched)
             {
+                ItemController nearestItem = ItemController.ClosestItemToPlayer;
+                bool nearestItemIsDifferentThanItemBeingCarried = nearestItem != _itemBeingCarried;
+
                 if (_itemBeingCarried != null)
-                {
                     DropItem();
-                }
-                if (LastItemTouched != null && PickUpItem(LastItemTouched))
-                {
-                    LastItemTouched = null;
-                }
+
+                if (nearestItem != null && nearestItemIsDifferentThanItemBeingCarried)
+                    PickUpItem(nearestItem);
             }
 
             if (DualityApp.Mouse.ButtonPressed(MouseButton.Left))
@@ -148,8 +127,8 @@ namespace RainingPackages.GameObjects
             if (touching != null)
             {
                 touching.Touch(this);
-                if (touching is ItemController && ((ItemController)touching) != _itemBeingCarried)
-                    LastItemTouched = touching as ItemController;
+                //if (touching is ItemController && ((ItemController)touching) != _itemBeingCarried)
+                //    LastItemTouched = touching as ItemController;
             }
 
             PinItemBeingCarriedToPlayerPosition();
@@ -191,24 +170,15 @@ namespace RainingPackages.GameObjects
         {
         }
 
-        private bool PickUpItem(ItemController item)
+        private void PickUpItem(ItemController item)
         {
             Debug.Assert(item != null);
-
-            bool pickedUp = false;
-
-            var dist = GameObj.Transform.Pos.Distance2D(item.GameObj.Transform.Pos);
-            if (dist < MIN_ITEM_PICKUP_DISTANCE)
-            {
-                _itemBeingCarried = item;
-                var body = _itemBeingCarried.GameObj.GetComponent<RigidBody>();
-                body.IgnoreGravity = true;
-                body.FixedAngle = true;
-                body.AngularVelocity = 0;
-                pickedUp = true;
-            }
-
-            return pickedUp;
+            
+            _itemBeingCarried = item;
+            var body = _itemBeingCarried.GameObj.GetComponent<RigidBody>();
+            body.IgnoreGravity = true;
+            body.FixedAngle = true;
+            body.AngularVelocity = 0;
         }
 
         private void DropItem()
