@@ -368,9 +368,38 @@
               <_version dataType="Int">9</_version>
             </shapes>
           </item>
+          <item dataType="Struct" type="Duality.Components.Renderers.TextRenderer" id="3512499226">
+            <active dataType="Bool">true</active>
+            <blockAlign dataType="Enum" type="Duality.Alignment" name="Left" value="1" />
+            <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
+              <A dataType="Byte">255</A>
+              <B dataType="Byte">255</B>
+              <G dataType="Byte">255</G>
+              <R dataType="Byte">255</R>
+            </colorTint>
+            <customMat />
+            <gameobj dataType="ObjectRef">1769870404</gameobj>
+            <iconMat dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Material]]" />
+            <offset dataType="Int">0</offset>
+            <text dataType="Struct" type="Duality.Drawing.FormattedText" id="1369031026">
+              <flowAreas />
+              <fonts dataType="Array" type="Duality.ContentRef`1[[Duality.Resources.Font]][]" id="1197801680">
+                <item dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]">
+                  <contentPath dataType="String">Default:Font:GenericMonospace10</contentPath>
+                </item>
+              </fonts>
+              <icons />
+              <lineAlign dataType="Enum" type="Duality.Alignment" name="Left" value="1" />
+              <maxHeight dataType="Int">0</maxHeight>
+              <maxWidth dataType="Int">0</maxWidth>
+              <sourceText dataType="String">          lsakdfjsdlkfj</sourceText>
+              <wrapMode dataType="Enum" type="Duality.Drawing.FormattedText+WrapMode" name="Word" value="1" />
+            </text>
+            <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />
+          </item>
         </_items>
-        <_size dataType="Int">5</_size>
-        <_version dataType="Int">15</_version>
+        <_size dataType="Int">6</_size>
+        <_version dataType="Int">14</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3535833914" surrogate="true">
         <header />
@@ -381,6 +410,7 @@
             <item dataType="Type" id="23900956" value="RainingPackages.GameObjects.RaycastController" />
             <item dataType="Type" id="2240785942" value="RainingPackages.GameObjects.PlayerController" />
             <item dataType="Type" id="3304788104" value="Duality.Components.Physics.RigidBody" />
+            <item dataType="Type" id="1094699954" value="Duality.Components.Renderers.TextRenderer" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="2865269838">
             <item dataType="ObjectRef">4130185336</item>
@@ -388,6 +418,7 @@
             <item dataType="ObjectRef">1647690064</item>
             <item dataType="ObjectRef">2566220740</item>
             <item dataType="ObjectRef">537679632</item>
+            <item dataType="ObjectRef">3512499226</item>
           </values>
         </body>
       </compMap>
@@ -412,7 +443,7 @@
             <_texts dataType="Struct" type="System.Collections.Generic.List`1[[System.String]]" id="2875919821">
               <_items dataType="Array" type="System.String[]" id="189741606" length="0" />
               <_size dataType="Int">0</_size>
-              <_version dataType="Int">156985</_version>
+              <_version dataType="Int">156892</_version>
             </_texts>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">2437817580</gameobj>

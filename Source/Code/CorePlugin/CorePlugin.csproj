@@ -64,11 +64,13 @@
     <Compile Include="EventAggregation\EventDetails\DebugMessageEvent.cs" />
     <Compile Include="EventAggregation\EventDetails\DroneCreatedEvent.cs" />
     <Compile Include="EventAggregation\EventDetails\PlayerMovedEvent.cs" />
+    <Compile Include="EventAggregation\EventDetails\TimeFreezeEvent.cs" />
     <Compile Include="Extensions\IDictionaryExtensions.cs" />
     <Compile Include="Extensions\NumberExtensions.cs" />
     <Compile Include="Extensions\VectorExtensions.cs" />
     <Compile Include="Factories\DroneFactory.cs" />
     <Compile Include="GameObjects\DroneControl.cs" />
+    <Compile Include="GameObjects\FreezableComponent.cs" />
     <Compile Include="GameObjects\ItemController.cs" />
     <Compile Include="GameObjects\PackageControl.cs" />
     <Compile Include="GameObjects\PlayerController.cs" />
@@ -80,7 +82,6 @@
     <Compile Include="Interfaces\ITouchable.cs" />
     <Compile Include="Properties\ErrorHandlers.cs" />
     <Compile Include="CorePlugin.cs" />
-    <Compile Include="GameObjects\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextRenderers\DebugTextRenderer.cs" />
   </ItemGroup>

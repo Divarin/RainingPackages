@@ -272,13 +272,9 @@
             <gameobj dataType="ObjectRef">1769870404</gameobj>
           </item>
           <item dataType="Struct" type="RainingPackages.GameObjects.PlayerController" id="2566220740">
-            <_aimingAngle dataType="Float">3.14159274</_aimingAngle>
-            <_aimingStrength dataType="Float">0</_aimingStrength>
-            <_isAiming dataType="Bool">false</_isAiming>
             <_isJumping dataType="Bool">false</_isJumping>
             <_itemBeingCarried />
             <_lastItemTouchedRef />
-            <_lastPlayerDirection dataType="Int">1</_lastPlayerDirection>
             <_x003C_AccelerationAirborne_x003E_k__BackingField dataType="Float">25</_x003C_AccelerationAirborne_x003E_k__BackingField>
             <_x003C_AccelerationGrounded_x003E_k__BackingField dataType="Float">100</_x003C_AccelerationGrounded_x003E_k__BackingField>
             <_x003C_JumpHeight_x003E_k__BackingField dataType="Float">500</_x003C_JumpHeight_x003E_k__BackingField>
@@ -370,7 +366,7 @@
           </item>
         </_items>
         <_size dataType="Int">5</_size>
-        <_version dataType="Int">15</_version>
+        <_version dataType="Int">13</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="3535833914" surrogate="true">
         <header />
@@ -412,7 +408,7 @@
             <_texts dataType="Struct" type="System.Collections.Generic.List`1[[System.String]]" id="2875919821">
               <_items dataType="Array" type="System.String[]" id="189741606" length="0" />
               <_size dataType="Int">0</_size>
-              <_version dataType="Int">156985</_version>
+              <_version dataType="Int">144864</_version>
             </_texts>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">2437817580</gameobj>

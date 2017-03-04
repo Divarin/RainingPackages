@@ -29,5 +29,18 @@ namespace RainingPackages.Extensions
             float distance = MathF.Sqrt((x * x) + (y * y));
             return distance;
         }
+
+        public static float Distance2D(this Vector2 vectorA, Vector2 vectorB)
+        {
+            float x = vectorA.X - vectorB.X;
+            float y = vectorA.Y - vectorB.Y;
+            float distance = MathF.Sqrt((x * x) + (y * y));
+            return distance;
+        }
+
+        public static Vector2 ToVector2(this Vector3 sourceVector)
+        {
+            return new Vector2(sourceVector.X, sourceVector.Y);
+        }
     }
 }

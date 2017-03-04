@@ -5,7 +5,7 @@ using RainingPackages.Interfaces;
 
 namespace RainingPackages.GameObjects
 {
-    public class ItemController : Component, ICmpUpdatable, ITouchable
+    public class ItemController : FreezableComponent, ICmpUpdatable, ITouchable
     {
         public void OnUpdate()
         {            

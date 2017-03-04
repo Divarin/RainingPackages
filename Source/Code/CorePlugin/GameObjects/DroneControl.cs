@@ -9,11 +9,13 @@ using RainingPackages.Interfaces;
 namespace RainingPackages.GameObjects
 {
     [RequiredComponent(typeof(RigidBody))]
-    public class DroneControl : Component, ICmpUpdatable, IDespawnable
+    public class DroneControl : FreezableComponent, ICmpUpdatable, IDespawnable, IEventSubscriber<TimeFreezeEvent>
     {
         public void OnUpdate()
         {
             //EventAggregator.AnnounceEvent(new DebugMessageEvent($"{GameObj.Transform.Pos.X}, {GameObj.Transform.Pos.Y}"));
+            if (IsFrozen)
+                return;
 
             if (_isFlyingAway)
             {
@@ -32,7 +34,7 @@ namespace RainingPackages.GameObjects
                 TryToHoldPosition();
             }
         }
-
+        
         public Vector3 TargetPosition { get; set; } = new Vector3(0, 0, 0);
         private bool _isDespawning = false;
         private WeakReference<PackageControl> _attachedPackageRef;
