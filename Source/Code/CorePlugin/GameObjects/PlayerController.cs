@@ -47,7 +47,7 @@ namespace RainingPackages.GameObjects
         
         public void OnUpdate()
         {
-            EventAggregator.AnnounceEvent(new DebugMessageEvent($"Last Throw: {_lastThrowAngle} @ {_lastThrowStrength}"));
+            EventAggregator.AnnounceEvent(new DebugMessageEvent($"Last Throw: {_lastThrowAngle:#} @ {_lastThrowStrength:#}"));
             
             if (RaycastController.Collisions.Below || RaycastController.Collisions.Above)
                 velocity.Y = 0;

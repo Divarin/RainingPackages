@@ -14,6 +14,37 @@
             How quickly the drone raises or lowers throttle
             </summary>
         </member>
+        <member name="T:RainingPackages.GameObjects.FreezableComponent">
+            <summary>
+            A Component which freezes when time freezes (TimeFreezeEvent occurs).  This happens when the player begins aiming and time resumes when she throws
+            </summary>
+        </member>
+        <member name="P:RainingPackages.GameObjects.FreezableComponent.IsFrozen">
+            <summary>
+            Gets whether or not the component is frozen in time
+            </summary>
+        </member>
+        <member name="M:RainingPackages.GameObjects.FreezableComponent.OnEvent(RainingPackages.EventAggregation.EventDetails.TimeFreezeEvent)">
+            <summary>
+            Attempt to "freeze" the object in place by saving the current linear and angular velocity of the component's rigid body 
+            (if it has one) then set the current values to zero.  When time resumes this method will restore those saved values.  
+            May override this if a particlar component needs to do other things when time freezes / unfreezes
+            </summary>
+        </member>
+        <member name="M:RainingPackages.GameObjects.FreezableComponent.ResetSavedLinearVelocity(Duality.Vector2)">
+            <summary>
+            If the linear velocity of the component has changed during the time freeze (such as an item thrown) 
+            then this will update the saved linear velocity so that when time resumes that will becomes the active linear velocity
+            </summary>
+            <param name="newLinearVelocity"></param>
+        </member>
+        <member name="M:RainingPackages.GameObjects.FreezableComponent.ResetSavedAngularVelocity(System.Single)">
+            <summary>
+            If the angular velocity of the component has changed during the time freeze 
+            then this will update the saved angular velocity so that when time resumes that will becomes the active angular velocity
+            </summary>
+            <param name="newAngularVelocity"></param>
+        </member>
         <member name="T:RainingPackages.Interfaces.ITouchable">
             <summary>
             An interface for any object which responds when it makes physical contact with another object
