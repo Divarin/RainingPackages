@@ -219,10 +219,10 @@
           </item>
           <item dataType="Struct" type="RainingPackages.GameObjects.RaycastController" id="1647690064">
             <_bounds dataType="Struct" type="Duality.Rect">
-              <H dataType="Float">493</H>
-              <W dataType="Float">268</W>
-              <X dataType="Float">-134</X>
-              <Y dataType="Float">653.5</Y>
+              <H dataType="Float">256</H>
+              <W dataType="Float">256</W>
+              <X dataType="Float">-128</X>
+              <Y dataType="Float">772</Y>
             </_bounds>
             <_collisions dataType="Struct" type="RainingPackages.GameObjects.RaycastController+CollisionInfo" id="1679695360">
               <_x003C_Above_x003E_k__BackingField dataType="Bool">false</_x003C_Above_x003E_k__BackingField>
@@ -235,9 +235,9 @@
               <_x003C_SlopeAngleOld_x003E_k__BackingField dataType="Float">0</_x003C_SlopeAngleOld_x003E_k__BackingField>
               <_x003C_Touching_x003E_k__BackingField />
             </_collisions>
-            <_horizontalRaySpacing dataType="Float">157.666672</_horizontalRaySpacing>
+            <_horizontalRaySpacing dataType="Float">78.6666641</_horizontalRaySpacing>
             <_raycastOrigins dataType="Struct" type="RainingPackages.GameObjects.RaycastController+RayCastOrigins" />
-            <_verticalRaySpacing dataType="Float">82.6666641</_verticalRaySpacing>
+            <_verticalRaySpacing dataType="Float">78.6666641</_verticalRaySpacing>
             <_x003C_HorizontalRayCount_x003E_k__BackingField dataType="Int">4</_x003C_HorizontalRayCount_x003E_k__BackingField>
             <_x003C_MaxClimbAngle_x003E_k__BackingField dataType="Float">80</_x003C_MaxClimbAngle_x003E_k__BackingField>
             <_x003C_MaxDescendAngle_x003E_k__BackingField dataType="Float">75</_x003C_MaxDescendAngle_x003E_k__BackingField>
@@ -270,11 +270,11 @@
           </item>
           <item dataType="Struct" type="Duality.Components.Renderers.AnimSpriteRenderer" id="1477305785">
             <active dataType="Bool">true</active>
-            <animDuration dataType="Float">1</animDuration>
+            <animDuration dataType="Float">5</animDuration>
             <animFirstFrame dataType="Int">0</animFirstFrame>
-            <animFrameCount dataType="Int">4</animFrameCount>
+            <animFrameCount dataType="Int">42</animFrameCount>
             <animLoopMode dataType="Enum" type="Duality.Components.Renderers.AnimSpriteRenderer+LoopMode" name="PingPong" value="2" />
-            <animPaused dataType="Bool">false</animPaused>
+            <animPaused dataType="Bool">true</animPaused>
             <animTime dataType="Float">0</animTime>
             <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
               <A dataType="Byte">255</A>
@@ -342,7 +342,7 @@
             <_texts dataType="Struct" type="System.Collections.Generic.List`1[[System.String]]" id="2875919821">
               <_items dataType="Array" type="System.String[]" id="189741606" length="0" />
               <_size dataType="Int">0</_size>
-              <_version dataType="Int">179458</_version>
+              <_version dataType="Int">177854</_version>
             </_texts>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">2437817580</gameobj>

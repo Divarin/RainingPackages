@@ -25,13 +25,16 @@ namespace RainingPackages.GameObjects
 
             if (eventDetails.IsFrozen)
             {
-                _savedVelocity = body.LinearVelocity;
-                _savedAngularVelocity = body.AngularVelocity;
                 if (body != null)
                 {
-                    body.IgnoreGravity = true;
-                    body.LinearVelocity = new Vector2(0, 0);
-                    body.AngularVelocity = 0;
+                    _savedVelocity = body.LinearVelocity;
+                    _savedAngularVelocity = body.AngularVelocity;
+                    if (body != null)
+                    {
+                        body.IgnoreGravity = true;
+                        body.LinearVelocity = new Vector2(0, 0);
+                        body.AngularVelocity = 0;
+                    }
                 }
                 IsFrozen = true;
             }

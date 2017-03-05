@@ -1,6 +1,7 @@
 ﻿using Duality;
 using Duality.Components;
 using Duality.Components.Physics;
+using Duality.Components.Renderers;
 using Duality.Input;
 using RainingPackages.EventAggregation;
 using RainingPackages.EventAggregation.EventDetails;
@@ -8,20 +9,19 @@ using RainingPackages.Extensions;
 using RainingPackages.InputControl;
 using System;
 using System.Diagnostics;
-using Duality.Drawing;
-using Duality.Resources;
-using Duality.Components.Renderers;
 
 namespace RainingPackages.GameObjects
 {
     [RequiredComponent(typeof(RaycastController))]
-    public class PlayerController : Component, ICmpUpdatable, ICmpInitializable
+    public class PlayerController : FreezableComponent, ICmpUpdatable, ICmpInitializable
     {
         public float MoveSpeed { get; set; } = 1500f;
         public float JumpHeight { get; set; } = 500f;
         public float TimeToJumpApex { get; set; } = 0.04f;
         public float AccelerationGrounded { get; set; } = 100f;
         public float AccelerationAirborne { get; set; } = 25f;
+        public float MinThrowStrength { get; set; } = 200f;
+        public float MaxThrowStrength { get; set; } = 2600f;
 
         private float gravity;
         private float jumpVelocity;
@@ -29,9 +29,10 @@ namespace RainingPackages.GameObjects
 
         private bool _isAiming = false;
         private float _aimingAngle = Vector2.UnitY.Angle;
-        private float _aimingStrength = 0;
+        private float _aimingStrength = 1f;
         
         private int _lastPlayerDirection = 1;
+        private float _lastThrowAngle, _lastThrowStrength;
 
         private Vector2 velocity;
         private ItemController _itemBeingCarried = null;
@@ -46,24 +47,42 @@ namespace RainingPackages.GameObjects
         
         public void OnUpdate()
         {
-            EventAggregator.AnnounceEvent(new DebugMessageEvent($"Last Throw: ({_lastThrowX:0.00}, {_lastThrowY:0.00})"));
+            EventAggregator.AnnounceEvent(new DebugMessageEvent($"Last Throw: {_lastThrowAngle} @ {_lastThrowStrength}"));
             
             if (RaycastController.Collisions.Below || RaycastController.Collisions.Above)
                 velocity.Y = 0;
 
+            var sprite = GameObj.GetComponent<AnimSpriteRenderer>();
+
             Vector2 input = Vector2.Zero;
-            if (PlayerInput.Pressed(GameAction.MoveLeft))
+            
+            if (!IsFrozen && PlayerInput.Pressed(GameAction.MoveLeft))
             {
                 input.X = -1;
                 _lastPlayerDirection = -1;
+                sprite.AnimFirstFrame = 15;
+                sprite.AnimFrameCount = 6;
+                sprite.AnimDuration = 1;
+                //sprite.AnimPaused = false;
             }
-            else if (PlayerInput.Pressed(GameAction.MoveRight))
+            else if (!IsFrozen && PlayerInput.Pressed(GameAction.MoveRight))
             {
                 input.X = 1;
                 _lastPlayerDirection = 1;
+                sprite.AnimFirstFrame = 22;
+                sprite.AnimFrameCount = 6;
+                sprite.AnimDuration = 1;
+                //sprite.AnimPaused = false;
             }
-
-            if (PlayerInput.Hit(GameAction.Use))// && _itemBeingCarried != LastItemTouched)
+            else
+            {
+                //sprite.AnimPaused = true;
+                sprite.AnimFirstFrame = _lastPlayerDirection == 1 ? 7 : 0;
+                sprite.AnimFrameCount = 4;
+                sprite.AnimDuration = 5;
+            }
+            
+            if (!IsFrozen && PlayerInput.Hit(GameAction.Use))// && _itemBeingCarried != LastItemTouched)
             {
                 ItemController nearestItem = ItemController.ClosestItemToPlayer;
                 bool nearestItemIsDifferentThanItemBeingCarried = nearestItem != _itemBeingCarried;
@@ -75,7 +94,7 @@ namespace RainingPackages.GameObjects
                     PickUpItem(nearestItem);
             }
 
-            if (DualityApp.Mouse.ButtonPressed(MouseButton.Left))
+            if (_itemBeingCarried != null && DualityApp.Mouse.ButtonPressed(MouseButton.Left))
             {
                 // Aiming
                 if (!_isAiming)
@@ -103,7 +122,7 @@ namespace RainingPackages.GameObjects
 
             // Don't use "KeyHit" as it may get skipped occasionally. check if key is down (regardless of whether or not it was hit this frame)
             // and then check if the character is already jumping from a previous frame (_isJumping)
-            if ( !_isJumping && (PlayerInput.Pressed(GameAction.Jump)))
+            if (!IsFrozen && !_isJumping && (PlayerInput.Pressed(GameAction.Jump)))
             {
                 velocity.Y = -jumpVelocity;
                 _isJumping = true;
@@ -149,11 +168,18 @@ namespace RainingPackages.GameObjects
             Vector2 aimPos2D = mousePos2D - playerPos2D;
 
             _aimingAngle = Vector2.AngleBetween(Vector2.UnitX, aimPos2D);
-            _aimingStrength = playerPos2D.Distance2D(aimPos2D);
+            var deg = MathF.RadToDeg(_aimingAngle);
+            deg = (int) (deg/5);
+            deg *= 5;
+            _aimingAngle = MathF.DegToRad(deg);
+
+            _aimingStrength = _aimingStrength.Constrain(MinThrowStrength, MaxThrowStrength);
+
+            aimPos2D = new Vector2(MathF.Cos(_aimingAngle), -MathF.Sin(_aimingAngle)) * _aimingStrength;
 
             VisualLog.Default.DrawVector(playerPos3D.X, playerPos3D.Y, playerPos3D.Z, aimPos2D.X, aimPos2D.Y);
 
-            string text = $"      Angle: {MathF.RadToDeg(_aimingAngle): 0.00}     Strength: {_aimingStrength: 0.00}";
+            string text = $"Angle: {MathF.RadToDeg(_aimingAngle): 0.00}     Strength: {_aimingStrength: 0.00}";
             //TextRenderer textRenderer = GameObj.GetComponent<TextRenderer>();
             //textRenderer.Text = new FormattedText(text);
             EventAggregator.AnnounceEvent(new DebugMessageEvent(text));
@@ -161,9 +187,24 @@ namespace RainingPackages.GameObjects
 
         public void OnInit(InitContext context)
         {
-            gravity = (2 * JumpHeight) / TimeToJumpApex / TimeToJumpApex;
-            jumpVelocity = MathF.Abs(gravity) * TimeToJumpApex;
-            Log.Game.Write(String.Format("Gravity: {0}, jump velocity: {1}", gravity, jumpVelocity));
+            if (context == InitContext.Activate)
+            {
+                gravity = (2 * JumpHeight) / TimeToJumpApex / TimeToJumpApex;
+                jumpVelocity = MathF.Abs(gravity) * TimeToJumpApex;
+                Log.Game.Write(String.Format("Gravity: {0}, jump velocity: {1}", gravity, jumpVelocity));
+
+                _aimingStrength = (MinThrowStrength + MaxThrowStrength) / 2;
+                DualityApp.Mouse.WheelChanged += Mouse_WheelChanged;
+            }
+        }
+
+        private void Mouse_WheelChanged(object sender, MouseWheelEventArgs e)
+        {
+            if (_isAiming)
+            {
+                var direction = MathF.Sign(e.WheelDelta);
+                _aimingStrength += 100 * direction;
+            }
         }
 
         public void OnShutdown(ShutdownContext context)
@@ -197,8 +238,6 @@ namespace RainingPackages.GameObjects
         {
             Debug.Assert(_itemBeingCarried != null);
 
-            Debug.Assert(_itemBeingCarried != null);
-
             var body = _itemBeingCarried.GameObj.GetComponent<RigidBody>();
             body.IgnoreGravity = false;
             body.FixedAngle = false;
@@ -206,32 +245,23 @@ namespace RainingPackages.GameObjects
             float x, y;
             x = MathF.Cos(_aimingAngle) * _aimingStrength * 0.02f;
             y = -1 * MathF.Sin(_aimingAngle) * _aimingStrength * 0.02f;
-            _lastThrowX = x;
-            _lastThrowY = y;
-
-            //GameObj.Transform.Pos = new Vector3(GameObj.Transform.Pos.X, GameObj.Transform.Pos.Y - 100, GameObj.Transform.Pos.Z);
-            //body.ApplyLocalForce(new Vector2(x, y));
-
+            _lastThrowAngle = MathF.RadToDeg(_aimingAngle);
+            _lastThrowStrength = _aimingStrength;
+            
             Vector2 vel = new Vector2(x, y);
             _itemBeingCarried.ResetSavedLinearVelocity(vel);
             body.LinearVelocity = vel;
-
-            //body.AngularVelocity = _lastPlayerDirection * MathF.Pi / 16f * Time.TimeMult;
+            
             _itemBeingCarried = null;
         }
-
-        private float _lastThrowX, _lastThrowY;
         
         private void PinItemBeingCarriedToPlayerPosition()
         {
             if (_itemBeingCarried != null)
             {
-                _itemBeingCarried.GameObj.Transform.Pos = GameObj.Transform.Pos.CloneVector3(offset: new Vector3(0, 300, 0));
+                _itemBeingCarried.GameObj.Transform.Pos = GameObj.Transform.Pos.CloneVector3(offset: new Vector3(0, 500, 0));
             }
         }
-
-
-
-
+        
     }
 }

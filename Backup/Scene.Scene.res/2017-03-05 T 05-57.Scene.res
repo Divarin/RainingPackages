@@ -272,9 +272,9 @@
             <active dataType="Bool">true</active>
             <animDuration dataType="Float">1</animDuration>
             <animFirstFrame dataType="Int">0</animFirstFrame>
-            <animFrameCount dataType="Int">4</animFrameCount>
+            <animFrameCount dataType="Int">42</animFrameCount>
             <animLoopMode dataType="Enum" type="Duality.Components.Renderers.AnimSpriteRenderer+LoopMode" name="PingPong" value="2" />
-            <animPaused dataType="Bool">false</animPaused>
+            <animPaused dataType="Bool">true</animPaused>
             <animTime dataType="Float">0</animTime>
             <colorTint dataType="Struct" type="Duality.Drawing.ColorRgba">
               <A dataType="Byte">255</A>
@@ -342,7 +342,7 @@
             <_texts dataType="Struct" type="System.Collections.Generic.List`1[[System.String]]" id="2875919821">
               <_items dataType="Array" type="System.String[]" id="189741606" length="0" />
               <_size dataType="Int">0</_size>
-              <_version dataType="Int">179458</_version>
+              <_version dataType="Int">179367</_version>
             </_texts>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">2437817580</gameobj>

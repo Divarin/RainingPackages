@@ -11,7 +11,7 @@ namespace RainingPackages.GameObjects
         public static ItemController ClosestItemToPlayer { get; private set; }
         private static float _closestItemDistance = float.MaxValue;
 
-        private const float MIN_ITEM_PICKUP_DISTANCE = 300;
+        private const float MIN_ITEM_PICKUP_DISTANCE = 500;
 
         public void OnUpdate()
         {

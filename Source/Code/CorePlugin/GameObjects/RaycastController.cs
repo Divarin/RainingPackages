@@ -8,7 +8,7 @@ using System;
 
 namespace RainingPackages.GameObjects
 {
-    public class RaycastController : Component, ICmpInitializable
+    public class RaycastController : FreezableComponent, ICmpInitializable
     {
         public float SkinWidth { get; set; } = 10f;
         public int HorizontalRayCount { get; set; } = 4;
@@ -44,6 +44,9 @@ namespace RainingPackages.GameObjects
 
         public void Move(Vector2 velocity)
         {
+            if (IsFrozen)
+                return;
+
             CalculateBounds();
             CalculateRayCastOrigins();
             _collisions.Reset();
@@ -252,7 +255,7 @@ namespace RainingPackages.GameObjects
                     GameObj.Transform.Pos.X + animSpriteRenderer.Rect.X,
                     GameObj.Transform.Pos.Y + animSpriteRenderer.Rect.Y,
                     animSpriteRenderer.Rect.W,
-                    animSpriteRenderer.Rect.H);
+                    animSpriteRenderer.Rect.H );
             }
             else {
                 Log.Game.WriteError("A spriterenderer or animspriterenderer has to be attached!");
@@ -279,7 +282,7 @@ namespace RainingPackages.GameObjects
             _horizontalRaySpacing = shrinkedBounds.H / (HorizontalRayCount - 1);
             _verticalRaySpacing = shrinkedBounds.W / (VerticalRayCount - 1);
         }
-
+        
         public class CollisionInfo
         {
             public bool Above { get; set; }
