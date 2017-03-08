@@ -22,12 +22,12 @@
             <parentTransform />
             <pos dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
-              <Y dataType="Float">-700</Y>
+              <Y dataType="Float">0</Y>
               <Z dataType="Float">-3000</Z>
             </pos>
             <posAbs dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
-              <Y dataType="Float">-700</Y>
+              <Y dataType="Float">0</Y>
               <Z dataType="Float">-3000</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
@@ -345,12 +345,11 @@
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2224100770">
         <_items dataType="Array" type="Duality.Component[]" id="3441551632" length="4">
           <item dataType="Struct" type="RainingPackages.TextRenderers.DebugTextRenderer" id="4221861129">
-            <_messages dataType="Struct" type="System.Collections.Generic.List`1[[RainingPackages.EventAggregation.EventDetails.DebugMessageEvent]]" id="2875919821">
-              <_items dataType="Array" type="RainingPackages.EventAggregation.EventDetails.DebugMessageEvent[]" id="189741606" length="0" />
+            <_texts dataType="Struct" type="System.Collections.Generic.List`1[[System.String]]" id="2875919821">
+              <_items dataType="Array" type="System.String[]" id="189741606" length="0" />
               <_size dataType="Int">0</_size>
-              <_version dataType="Int">0</_version>
-            </_messages>
-            <_x003C_Font_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]" />
+              <_version dataType="Int">194167</_version>
+            </_texts>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">2437817580</gameobj>
           </item>
@@ -745,25 +744,18 @@
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">662036905</gameobj>
           </item>
-          <item dataType="Struct" type="RainingPackages.Settings.SettingsManager" id="2385987123">
-            <_currentResolutionIndex dataType="Int">5</_currentResolutionIndex>
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">662036905</gameobj>
-          </item>
         </_items>
-        <_size dataType="Int">2</_size>
-        <_version dataType="Int">2</_version>
+        <_size dataType="Int">1</_size>
+        <_version dataType="Int">1</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="998953032" surrogate="true">
         <header />
         <body>
           <keys dataType="Array" type="System.Object[]" id="4040335105">
             <item dataType="Type" id="1145270574" value="RainingPackages.Factories.DroneFactory" />
-            <item dataType="Type" id="3708715210" value="RainingPackages.Settings.SettingsManager" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="3143029600">
             <item dataType="ObjectRef">196884</item>
-            <item dataType="ObjectRef">2385987123</item>
           </values>
         </body>
       </compMap>
@@ -775,7 +767,7 @@
         <body />
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">Workers</name>
+      <name dataType="String">Factories</name>
       <parent />
       <prefabLink />
     </item>

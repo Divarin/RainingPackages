@@ -22,12 +22,12 @@
             <parentTransform />
             <pos dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
-              <Y dataType="Float">-700</Y>
+              <Y dataType="Float">-600</Y>
               <Z dataType="Float">-3000</Z>
             </pos>
             <posAbs dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
-              <Y dataType="Float">-700</Y>
+              <Y dataType="Float">-600</Y>
               <Z dataType="Float">-3000</Z>
             </posAbs>
             <scale dataType="Float">1</scale>

@@ -22,12 +22,12 @@
             <parentTransform />
             <pos dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
-              <Y dataType="Float">-700</Y>
+              <Y dataType="Float">0</Y>
               <Z dataType="Float">-3000</Z>
             </pos>
             <posAbs dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
-              <Y dataType="Float">-700</Y>
+              <Y dataType="Float">0</Y>
               <Z dataType="Float">-3000</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
@@ -120,12 +120,12 @@
             <parentTransform />
             <pos dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
-              <Y dataType="Float">1570</Y>
+              <Y dataType="Float">1500</Y>
               <Z dataType="Float">-1</Z>
             </pos>
             <posAbs dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
-              <Y dataType="Float">1570</Y>
+              <Y dataType="Float">1500</Y>
               <Z dataType="Float">-1</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
@@ -237,11 +237,8 @@
             </_collisions>
             <_horizontalRaySpacing dataType="Float">157.666672</_horizontalRaySpacing>
             <_raycastOrigins dataType="Struct" type="RainingPackages.GameObjects.RaycastController+RayCastOrigins" />
-            <_savedAngularVelocity dataType="Float">0</_savedAngularVelocity>
-            <_savedVelocity dataType="Struct" type="Duality.Vector2" />
             <_verticalRaySpacing dataType="Float">82.6666641</_verticalRaySpacing>
             <_x003C_HorizontalRayCount_x003E_k__BackingField dataType="Int">4</_x003C_HorizontalRayCount_x003E_k__BackingField>
-            <_x003C_IsFrozen_x003E_k__BackingField dataType="Bool">false</_x003C_IsFrozen_x003E_k__BackingField>
             <_x003C_MaxClimbAngle_x003E_k__BackingField dataType="Float">80</_x003C_MaxClimbAngle_x003E_k__BackingField>
             <_x003C_MaxDescendAngle_x003E_k__BackingField dataType="Float">75</_x003C_MaxDescendAngle_x003E_k__BackingField>
             <_x003C_SkinWidth_x003E_k__BackingField dataType="Float">10</_x003C_SkinWidth_x003E_k__BackingField>
@@ -251,18 +248,15 @@
           </item>
           <item dataType="Struct" type="RainingPackages.GameObjects.PlayerController" id="2566220740">
             <_aimingAngle dataType="Float">3.14159274</_aimingAngle>
-            <_aimingStrength dataType="Float">1255</_aimingStrength>
+            <_aimingStrength dataType="Float">0</_aimingStrength>
             <_isAiming dataType="Bool">false</_isAiming>
             <_isJumping dataType="Bool">false</_isJumping>
             <_itemBeingCarried />
             <_lastPlayerDirection dataType="Int">1</_lastPlayerDirection>
-            <_lastThrowAngle dataType="Float">0</_lastThrowAngle>
-            <_lastThrowStrength dataType="Float">0</_lastThrowStrength>
-            <_savedAngularVelocity dataType="Float">0</_savedAngularVelocity>
-            <_savedVelocity dataType="Struct" type="Duality.Vector2" />
+            <_lastThrowX dataType="Float">0</_lastThrowX>
+            <_lastThrowY dataType="Float">0</_lastThrowY>
             <_x003C_AccelerationAirborne_x003E_k__BackingField dataType="Float">25</_x003C_AccelerationAirborne_x003E_k__BackingField>
             <_x003C_AccelerationGrounded_x003E_k__BackingField dataType="Float">100</_x003C_AccelerationGrounded_x003E_k__BackingField>
-            <_x003C_IsFrozen_x003E_k__BackingField dataType="Bool">false</_x003C_IsFrozen_x003E_k__BackingField>
             <_x003C_JumpHeight_x003E_k__BackingField dataType="Float">500</_x003C_JumpHeight_x003E_k__BackingField>
             <_x003C_MaxThrowStrength_x003E_k__BackingField dataType="Float">2500</_x003C_MaxThrowStrength_x003E_k__BackingField>
             <_x003C_MinThrowStrength_x003E_k__BackingField dataType="Float">10</_x003C_MinThrowStrength_x003E_k__BackingField>
@@ -345,12 +339,11 @@
       <compList dataType="Struct" type="System.Collections.Generic.List`1[[Duality.Component]]" id="2224100770">
         <_items dataType="Array" type="Duality.Component[]" id="3441551632" length="4">
           <item dataType="Struct" type="RainingPackages.TextRenderers.DebugTextRenderer" id="4221861129">
-            <_messages dataType="Struct" type="System.Collections.Generic.List`1[[RainingPackages.EventAggregation.EventDetails.DebugMessageEvent]]" id="2875919821">
-              <_items dataType="Array" type="RainingPackages.EventAggregation.EventDetails.DebugMessageEvent[]" id="189741606" length="0" />
+            <_texts dataType="Struct" type="System.Collections.Generic.List`1[[System.String]]" id="2875919821">
+              <_items dataType="Array" type="System.String[]" id="189741606" length="0" />
               <_size dataType="Int">0</_size>
-              <_version dataType="Int">0</_version>
-            </_messages>
-            <_x003C_Font_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]" />
+              <_version dataType="Int">179458</_version>
+            </_texts>
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">2437817580</gameobj>
           </item>
@@ -745,25 +738,18 @@
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">662036905</gameobj>
           </item>
-          <item dataType="Struct" type="RainingPackages.Settings.SettingsManager" id="2385987123">
-            <_currentResolutionIndex dataType="Int">5</_currentResolutionIndex>
-            <active dataType="Bool">true</active>
-            <gameobj dataType="ObjectRef">662036905</gameobj>
-          </item>
         </_items>
-        <_size dataType="Int">2</_size>
-        <_version dataType="Int">2</_version>
+        <_size dataType="Int">1</_size>
+        <_version dataType="Int">1</_version>
       </compList>
       <compMap dataType="Struct" type="System.Collections.Generic.Dictionary`2[[System.Type],[Duality.Component]]" id="998953032" surrogate="true">
         <header />
         <body>
           <keys dataType="Array" type="System.Object[]" id="4040335105">
             <item dataType="Type" id="1145270574" value="RainingPackages.Factories.DroneFactory" />
-            <item dataType="Type" id="3708715210" value="RainingPackages.Settings.SettingsManager" />
           </keys>
           <values dataType="Array" type="System.Object[]" id="3143029600">
             <item dataType="ObjectRef">196884</item>
-            <item dataType="ObjectRef">2385987123</item>
           </values>
         </body>
       </compMap>
@@ -775,7 +761,7 @@
         <body />
       </identifier>
       <initState dataType="Enum" type="Duality.InitState" name="Initialized" value="1" />
-      <name dataType="String">Workers</name>
+      <name dataType="String">Factories</name>
       <parent />
       <prefabLink />
     </item>

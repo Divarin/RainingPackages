@@ -55,5 +55,26 @@
             Defines a Duality core plugin.
             </summary>
         </member>
+        <member name="M:RainingPackages.Settings.ScreenSetting.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new ScreenSetting with a custom aspect ratio where you define both the width and height
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:RainingPackages.Settings.ScreenSetting.#ctor(System.Int32,RainingPackages.Settings.AspectRatio)">
+            <summary>
+            Initializes a new ScreenSetting where the width is set based on the height and the specified aspect ratio
+            </summary>
+            <param name="height"></param>
+            <param name="ratio"></param>
+        </member>
+        <member name="M:RainingPackages.Settings.ScreenSetting.#ctor(RainingPackages.Settings.AspectRatio,System.Int32)">
+            <summary>
+            Initializes a new ScreenSetting where the height is set based on the width and the specified aspect ratio
+            </summary>
+            <param name="ratio"></param>
+            <param name="width"></param>
+        </member>
     </members>
 </doc>

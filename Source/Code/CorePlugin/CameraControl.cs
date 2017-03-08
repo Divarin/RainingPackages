@@ -1,4 +1,5 @@
-﻿using Duality;
+﻿using System;
+using Duality;
 using Duality.Components;
 using Duality.Components.Renderers;
 using RainingPackages.Enums;
@@ -9,11 +10,15 @@ using RainingPackages.Interfaces;
 namespace RainingPackages
 {
     [RequiredComponent(typeof(Camera))]
-    public class CameraControl : Component, ICmpInitializable, IEventSubscriber<PlayerMovedEvent>
+    public class CameraControl : Component, 
+        ICmpInitializable, 
+        IEventSubscriber<PlayerMovedEvent>, 
+        IEventSubscriber<ScreenSettingChangedEvent>
     {
         public CameraControl()
         {
-            EventAggregator.Subscribe(this);
+            EventAggregator.Subscribe<PlayerMovedEvent>(this);
+            EventAggregator.Subscribe<ScreenSettingChangedEvent>(this);
         }
 
         public void OnInit(InitContext context)
@@ -49,6 +54,16 @@ namespace RainingPackages
             float x = eventDetails.PlayerPosition.X;
             var camTx = GameObj.GetComponent<Transform>();
             Vector3 camPos = new Vector3(x, camTx.Pos.Y, camTx.Pos.Z);
+            camTx.MoveToAbs(camPos);
+        }
+
+        public void OnEvent(ScreenSettingChangedEvent eventDetails)
+        {
+            int w = eventDetails.ScreenSetting.Width;
+            var p = MathF.Log(1600F/w, 2);
+            var z = -3000F * MathF.Pow(2, p);
+            var camTx = GameObj.GetComponent<Transform>();
+            Vector3 camPos = new Vector3(camTx.Pos.X, camTx.Pos.Y, z);
             camTx.MoveToAbs(camPos);
         }
     }

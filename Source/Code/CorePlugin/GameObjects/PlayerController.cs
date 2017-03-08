@@ -46,9 +46,7 @@ namespace RainingPackages.GameObjects
         }
         
         public void OnUpdate()
-        {
-            EventAggregator.AnnounceEvent(new DebugMessageEvent($"Last Throw: {_lastThrowAngle:#} @ {_lastThrowStrength:#}"));
-            
+        {   
             if (RaycastController.Collisions.Below || RaycastController.Collisions.Above)
                 velocity.Y = 0;
 
@@ -180,8 +178,8 @@ namespace RainingPackages.GameObjects
             VisualLog.Default.DrawVector(playerPos3D.X, playerPos3D.Y, playerPos3D.Z, aimPos2D.X, aimPos2D.Y);
 
             string text = $"Angle: {MathF.RadToDeg(_aimingAngle): 0.00}     Strength: {_aimingStrength: 0.00}";
-            //TextRenderer textRenderer = GameObj.GetComponent<TextRenderer>();
-            //textRenderer.Text = new FormattedText(text);
+
+            EventAggregator.AnnounceEvent(new DebugMessageEvent($"Last Throw: {_lastThrowAngle:#} @ {_lastThrowStrength:#}"));
             EventAggregator.AnnounceEvent(new DebugMessageEvent(text));
         }
 

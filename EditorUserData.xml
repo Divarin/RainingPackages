@@ -148,19 +148,19 @@
         <Content ID="1" RefID="6" />
       </Contents>
     </Pane>
-    <Pane ID="7" DockState="Float" ActiveContent="6">
+    <Pane ID="7" DockState="Float" ActiveContent="-1">
+      <Contents Count="1">
+        <Content ID="0" RefID="1" />
+      </Contents>
+    </Pane>
+    <Pane ID="8" DockState="DockRight" ActiveContent="1">
+      <Contents Count="1">
+        <Content ID="0" RefID="1" />
+      </Contents>
+    </Pane>
+    <Pane ID="9" DockState="Float" ActiveContent="6">
       <Contents Count="1">
         <Content ID="0" RefID="6" />
-      </Contents>
-    </Pane>
-    <Pane ID="8" DockState="Float" ActiveContent="-1">
-      <Contents Count="1">
-        <Content ID="0" RefID="1" />
-      </Contents>
-    </Pane>
-    <Pane ID="9" DockState="DockRight" ActiveContent="1">
-      <Contents Count="1">
-        <Content ID="0" RefID="1" />
       </Contents>
     </Pane>
   </Panes>
@@ -178,7 +178,7 @@
         <Pane ID="0" RefID="0" PrevPane="-1" Alignment="Bottom" Proportion="0.5" />
         <Pane ID="1" RefID="2" PrevPane="0" Alignment="Right" Proportion="0.505276283792179" />
         <Pane ID="2" RefID="3" PrevPane="2" Alignment="Top" Proportion="0.238904955880724" />
-        <Pane ID="3" RefID="9" PrevPane="0" Alignment="Bottom" Proportion="0.5" />
+        <Pane ID="3" RefID="8" PrevPane="0" Alignment="Bottom" Proportion="0.5" />
       </NestedPanes>
     </DockWindow>
     <DockWindow ID="3" DockState="DockTop" ZOrderIndex="4">
@@ -203,12 +203,12 @@
     </FloatWindow>
     <FloatWindow ID="2" Bounds="4145, 97, 300, 911" ZOrderIndex="2">
       <NestedPanes Count="1">
-        <Pane ID="0" RefID="8" PrevPane="-1" Alignment="Right" Proportion="0.5" />
+        <Pane ID="0" RefID="7" PrevPane="-1" Alignment="Right" Proportion="0.5" />
       </NestedPanes>
     </FloatWindow>
-    <FloatWindow ID="3" Bounds="4465, 86, 1428, 896" ZOrderIndex="3">
+    <FloatWindow ID="3" Bounds="136, 0, 1706, 1040" ZOrderIndex="3">
       <NestedPanes Count="1">
-        <Pane ID="0" RefID="7" PrevPane="-1" Alignment="Right" Proportion="0.5" />
+        <Pane ID="0" RefID="9" PrevPane="-1" Alignment="Right" Proportion="0.5" />
       </NestedPanes>
     </FloatWindow>
   </FloatWindows>

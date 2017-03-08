@@ -6,6 +6,7 @@ using RainingPackages.EventAggregation.EventDetails;
 using RainingPackages.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace RainingPackages.TextRenderers
 {
@@ -14,22 +15,14 @@ namespace RainingPackages.TextRenderers
         public DebugTextRenderer()
         {
             EventAggregator.Subscribe(this);
-
         }
+
         [DontSerialize]
         private CanvasBuffer _buffer = null;
-
-        //public ContentRef<Font> Font { get; set; }
-
-        public float BoundRadius {  get { return float.MaxValue; } }
-
-        //public string Text { get; set; } = "";
-        private List<string> _texts = new List<string>();
-
-        public void AddText(string text)
-        {
-            _texts.Add(text);
-        }
+        public ContentRef<Font> Font { get; set; }
+        public float BoundRadius {  get { return float.MaxValue; } }        
+        private List<DebugMessageEvent> _messages = new List<DebugMessageEvent>();
+        
 
         public void Draw(IDrawDevice device)
         {
@@ -40,18 +33,29 @@ namespace RainingPackages.TextRenderers
             canvas.State.SetMaterial(new BatchInfo(DrawTechnique.Alpha, ColorRgba.White));
             canvas.State.ColorTint = ColorRgba.Black;//.WithAlpha(0.5f);
 
-            //if (Font != null)
-            //    canvas.State.TextFont = Font;
+            if (Font != null)
+                canvas.State.TextFont = Font;
 
             const float lineSpacing = 15;
             float y = 0;
-            foreach (string text in _texts)
+            foreach (string text in _messages.Select(x => x.Message))
             {
                 canvas.DrawText(text, 0, y);
                 y += lineSpacing;
             }
 
-            _texts.Clear();
+            RemoveOldMessages();
+        }
+
+        private void RemoveOldMessages()
+        {
+            var now = DateTime.Now;
+            for (int i=_messages.Count-1; i >= 0; i--)
+            {
+                var msg = _messages[i];
+                if (msg.TimeToEnd <= now)
+                    _messages.RemoveAt(i);
+            }
         }
 
         public bool IsVisible(IDrawDevice device)
@@ -66,7 +70,7 @@ namespace RainingPackages.TextRenderers
         
         public void OnEvent(DebugMessageEvent eventDetails)
         {
-            _texts.Add(eventDetails.Message);
+            _messages.Add(eventDetails);
         }
     }
 }

@@ -22,12 +22,12 @@
             <parentTransform />
             <pos dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
-              <Y dataType="Float">-700</Y>
+              <Y dataType="Float">0</Y>
               <Z dataType="Float">-3000</Z>
             </pos>
             <posAbs dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
-              <Y dataType="Float">-700</Y>
+              <Y dataType="Float">0</Y>
               <Z dataType="Float">-3000</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
@@ -350,7 +350,6 @@
               <_size dataType="Int">0</_size>
               <_version dataType="Int">0</_version>
             </_messages>
-            <_x003C_Font_x003E_k__BackingField dataType="Struct" type="Duality.ContentRef`1[[Duality.Resources.Font]]" />
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">2437817580</gameobj>
           </item>
@@ -747,6 +746,7 @@
           </item>
           <item dataType="Struct" type="RainingPackages.Settings.SettingsManager" id="2385987123">
             <_currentResolutionIndex dataType="Int">5</_currentResolutionIndex>
+            <_currentScreenMode dataType="Enum" type="Duality.ScreenMode" name="Window" value="0" />
             <active dataType="Bool">true</active>
             <gameobj dataType="ObjectRef">662036905</gameobj>
           </item>

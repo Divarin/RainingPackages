@@ -23,12 +23,12 @@
             <pos dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
               <Y dataType="Float">-700</Y>
-              <Z dataType="Float">-3000</Z>
+              <Z dataType="Float">-12000</Z>
             </pos>
             <posAbs dataType="Struct" type="Duality.Vector3">
               <X dataType="Float">0</X>
               <Y dataType="Float">-700</Y>
-              <Z dataType="Float">-3000</Z>
+              <Z dataType="Float">-12000</Z>
             </posAbs>
             <scale dataType="Float">1</scale>
             <scaleAbs dataType="Float">1</scaleAbs>
@@ -37,7 +37,7 @@
           </item>
           <item dataType="Struct" type="Duality.Components.Camera" id="1752176274">
             <active dataType="Bool">true</active>
-            <farZ dataType="Float">10000</farZ>
+            <farZ dataType="Float">20000</farZ>
             <focusDist dataType="Float">500</focusDist>
             <gameobj dataType="ObjectRef">1214900467</gameobj>
             <nearZ dataType="Float">0</nearZ>
